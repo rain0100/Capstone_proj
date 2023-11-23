@@ -11,9 +11,20 @@ offset_right = 1155.0
 offset_bottom = 76.0
 text = "Back to Title"
 script = ExtResource("1_cfpju")
+Button_path = "res://title.tscn"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 964.0
+offset_top = 76.0
+offset_right = 1152.0
+offset_bottom = 155.0
+text = "to the test inventory"
+script = ExtResource("1_cfpju")
+Button_path = "res://inventory.tscn"
 
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(286, 135)
 texture = ExtResource("2_37upc")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]

@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxdlbfsyby6ma"]
+
+[ext_resource type="Texture2D" uid="uid://djevgl4v8i5r6" path="res://imigs/imig_holder.jpg" id="1_sg6y1"]
+[ext_resource type="Texture2D" uid="uid://ci64j3t568olr" path="res://imigs/title_heder.png" id="2_oufbv"]
+[ext_resource type="Texture2D" uid="uid://d1t4ixrftrsou" path="res://imigs/contaner.png" id="3_cxb25"]
+[ext_resource type="Texture2D" uid="uid://bmy4sxa0dq5kb" path="res://imigs/and_gate.png" id="4_1u403"]
+
+[node name="inventory" type="Control"]
+light_mask = 513
+layout_mode = 3
+anchor_left = 0.594
+anchor_right = 0.677
+anchor_bottom = 0.13
+offset_left = -60.288
+offset_top = 12.0
+offset_right = 270.096
+offset_bottom = 555.76
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 8
+tooltip_text = "test screen
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="background" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 152.0
+offset_top = 121.0
+offset_right = 19.9999
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_sg6y1")
+
+[node name="title" type="TextureRect" parent="background"]
+layout_mode = 0
+offset_right = 292.0
+offset_bottom = 86.0
+texture = ExtResource("2_oufbv")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="background/title"]
+modulate = Color(0.00784314, 1, 1, 1)
+self_modulate = Color(0.133333, 0.682353, 1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.665
+offset_left = -65.0
+offset_top = -18.0
+offset_right = 77.0
+offset_bottom = 8.81
+grow_horizontal = 2
+grow_vertical = 2
+text = "Your cer invertory"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="background"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.999878
+offset_top = -350.0
+offset_right = -0.999939
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 2
+
+[node name="GridContainer" type="GridContainer" parent="background/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="inv1" type="TextureRect" parent="background/VBoxContainer/GridContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 8
+texture = ExtResource("3_cxb25")
+
+[node name="AndGate" type="Sprite2D" parent="."]
+position = Vector2(224, 339)
+scale = Vector2(0.135607, 0.154839)
+texture = ExtResource("4_1u403")
+
+[node name="AndGate2" type="Sprite2D" parent="."]
+position = Vector2(320, 488)
+scale = Vector2(0.112313, 0.187097)
+texture = ExtResource("4_1u403")

@@ -1,5 +1,5 @@
 extends Button
-
+@export var Button_path: String
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,5 +12,5 @@ func _process(delta):
 
 
 func _on_pressed():
-	get_tree().change_scene_to_file("res://title.tscn")
+	get_tree().change_scene_to_file(Button_path)
 	pass # Replace with function body.

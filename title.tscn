@@ -16,11 +16,38 @@ grow_vertical = 2
 
 [node name="title_to_cre_butten" type="Button" parent="."]
 layout_mode = 0
-offset_left = 362.0
-offset_top = 133.0
-offset_right = 640.0
-offset_bottom = 277.0
-text = "To creative mode"
+offset_left = 704.0
+offset_top = 167.0
+offset_right = 916.0
+offset_bottom = 258.0
+text = "Creative mode"
+script = ExtResource("1_e2keh")
+
+[node name="title_to_cre_butten2" type="Button" parent="."]
+offset_left = 335.0
+offset_top = 257.0
+offset_right = 495.0
+offset_bottom = 322.0
+text = "Load saved game"
+script = ExtResource("1_e2keh")
+
+[node name="title_to_cre_butten3" type="Button" parent="."]
+offset_left = 702.0
+offset_top = 259.0
+offset_right = 919.0
+offset_bottom = 353.0
+text = "Story mode"
+script = ExtResource("1_e2keh")
+
+[node name="title_to_cre_butten4" type="Button" parent="."]
+offset_left = 708.0
+offset_top = 354.0
+offset_right = 920.0
+offset_bottom = 449.0
+text = "PVP"
 script = ExtResource("1_e2keh")
 
 [connection signal="pressed" from="title_to_cre_butten" to="title_to_cre_butten" method="_on_pressed"]
+[connection signal="pressed" from="title_to_cre_butten2" to="title_to_cre_butten2" method="_on_pressed"]
+[connection signal="pressed" from="title_to_cre_butten3" to="title_to_cre_butten3" method="_on_pressed"]
+[connection signal="pressed" from="title_to_cre_butten4" to="title_to_cre_butten4" method="_on_pressed"]
