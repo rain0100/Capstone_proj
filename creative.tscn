@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c653bbinlubcp"]
+
+[ext_resource type="Script" path="res://Buttons/crea_to_title.gd" id="1_cfpju"]
+[ext_resource type="Texture2D" uid="uid://bhsbpcfw8p1v3" path="res://icon.svg" id="2_37upc"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 963.0
+offset_right = 1155.0
+offset_bottom = 76.0
+text = "Back to Title"
+script = ExtResource("1_cfpju")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(286, 135)
+texture = ExtResource("2_37upc")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
