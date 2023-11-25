@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cq7pwwtwjspik"]
+[gd_scene load_steps=3 format=3 uid="uid://cq7pwwtwjspik"]
 
 [ext_resource type="Script" path="res://Buttons/title_to_crea.gd" id="1_e2keh"]
+[ext_resource type="PackedScene" uid="uid://bc7okwygrgbs3" path="res://Logic_pice/and_gate.tscn" id="2_1ax4v"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -24,6 +25,7 @@ text = "Creative mode"
 script = ExtResource("1_e2keh")
 
 [node name="title_to_cre_butten2" type="Button" parent="."]
+layout_mode = 0
 offset_left = 335.0
 offset_top = 257.0
 offset_right = 495.0
@@ -32,6 +34,7 @@ text = "Load saved game"
 script = ExtResource("1_e2keh")
 
 [node name="title_to_cre_butten3" type="Button" parent="."]
+layout_mode = 0
 offset_left = 702.0
 offset_top = 259.0
 offset_right = 919.0
@@ -40,12 +43,16 @@ text = "Story mode"
 script = ExtResource("1_e2keh")
 
 [node name="title_to_cre_butten4" type="Button" parent="."]
+layout_mode = 0
 offset_left = 708.0
 offset_top = 354.0
 offset_right = 920.0
 offset_bottom = 449.0
 text = "PVP"
 script = ExtResource("1_e2keh")
+
+[node name="And" parent="." instance=ExtResource("2_1ax4v")]
+position = Vector2(189, 119)
 
 [connection signal="pressed" from="title_to_cre_butten" to="title_to_cre_butten" method="_on_pressed"]
 [connection signal="pressed" from="title_to_cre_butten2" to="title_to_cre_butten2" method="_on_pressed"]

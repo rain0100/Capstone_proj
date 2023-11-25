@@ -14,12 +14,13 @@ func _get_drag_data(at_position):
 	
 	#change thes 2 tines to duplicate the itam being coped 
 	# this stops the duplication
-	texture = null
-	return preview_textur.texture
+	#texture = null
+	#return preview_textur.texture
 	
 	#change them to just the line below 
 	# this will stop the copy from being  deleted
 	#return texture
+	return texture
 	
 	
 	

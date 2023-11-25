@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://wp6cnjs82fxs"]
+
+[ext_resource type="Script" path="res://Logic_pice/termanal.gd" id="1_03sif"]
+[ext_resource type="Texture2D" uid="uid://bey4ohtxi4bp6" path="res://imigs/in.png" id="2_u66vg"]
+
+[node name="Terminal" type="Node2D"]
+script = ExtResource("1_03sif")
+
+[node name="In" type="Sprite2D" parent="."]
+texture = ExtResource("2_u66vg")

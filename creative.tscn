@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://c653bbinlubcp"]
+[gd_scene load_steps=5 format=3 uid="uid://c653bbinlubcp"]
 
 [ext_resource type="Script" path="res://Buttons/crea_to_title.gd" id="1_cfpju"]
 [ext_resource type="Texture2D" uid="uid://bhsbpcfw8p1v3" path="res://icon.svg" id="2_37upc"]
+[ext_resource type="PackedScene" uid="uid://cd0tjidll0v8k" path="res://Logic_pice/Toggle_input.tscn" id="3_054qb"]
+[ext_resource type="PackedScene" uid="uid://rtlmhsbw0pr5" path="res://Logic_pice/wire.tscn" id="4_nu37q"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -25,6 +27,12 @@ Button_path = "res://inventory.tscn"
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(286, 135)
 texture = ExtResource("2_37upc")
+
+[node name="Toggle_input" parent="." instance=ExtResource("3_054qb")]
+position = Vector2(559, 300)
+
+[node name="Wire" parent="." instance=ExtResource("4_nu37q")]
+position = Vector2(402, 233)
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
