@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://cd0tjidll0v8k"]
-
-[ext_resource type="Script" path="res://Logic_pice/Toggle_input.gd" id="1_ul57d"]
-[ext_resource type="PackedScene" uid="uid://wp6cnjs82fxs" path="res://Logic_pice/termanal.tscn" id="2_dl8jk"]
-
-[node name="Toggle_input" type="Node2D"]
-script = ExtResource("1_ul57d")
-
-[node name="Terminal" parent="." instance=ExtResource("2_dl8jk")]

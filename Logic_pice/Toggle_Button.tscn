@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd0tjidll0v8k"]
+
+[ext_resource type="Script" path="res://Logic_pice/Toggle_Button.gd" id="1_mo4y1"]
+[ext_resource type="Texture2D" uid="uid://cot5xunxhvx2t" path="res://imigs/out.png" id="2_4s3ak"]
+
+[node name="Toggle_Button" type="Node2D"]
+script = ExtResource("1_mo4y1")
+
+[node name="Out" type="Sprite2D" parent="."]
+texture = ExtResource("2_4s3ak")

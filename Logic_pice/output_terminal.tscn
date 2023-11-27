@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1447o7qj7b34"]
+
+[ext_resource type="Script" path="res://Logic_pice/output_terminal.gd" id="1_w36h0"]
+[ext_resource type="Texture2D" uid="uid://cot5xunxhvx2t" path="res://imigs/out.png" id="2_xe133"]
+
+[node name="Output_terminal" type="Node2D"]
+script = ExtResource("1_w36h0")
+
+[node name="Out" type="Sprite2D" parent="."]
+texture = ExtResource("2_xe133")
