@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Buttons/crea_to_title.gd" id="1_cfpju"]
 [ext_resource type="Texture2D" uid="uid://bhsbpcfw8p1v3" path="res://icon.svg" id="2_37upc"]
 [ext_resource type="PackedScene" uid="uid://cd0tjidll0v8k" path="res://Logic_pice/Toggle_Button.tscn" id="3_054qb"]
-[ext_resource type="PackedScene" uid="uid://rtlmhsbw0pr5" path="res://Logic_pice/wire.tscn" id="4_nu37q"]
 [ext_resource type="PackedScene" uid="uid://crk8ewvm00l4o" path="res://Logic_pice/input_terminal.tscn" id="5_up8p0"]
+[ext_resource type="PackedScene" uid="uid://1sdrflb7vqch" path="res://Logic_pice/wire_manager.tscn" id="6_vaf7x"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -29,14 +29,13 @@ Button_path = "res://inventory.tscn"
 position = Vector2(286, 135)
 texture = ExtResource("2_37upc")
 
-[node name="Wire" parent="." instance=ExtResource("4_nu37q")]
-position = Vector2(565, 300)
-
 [node name="Toggle_Button" parent="." instance=ExtResource("3_054qb")]
 position = Vector2(517, 301)
 
 [node name="Input_Terminal" parent="." instance=ExtResource("5_up8p0")]
 position = Vector2(749, 378)
+
+[node name="WireManager" parent="." instance=ExtResource("6_vaf7x")]
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
