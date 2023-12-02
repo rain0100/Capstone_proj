@@ -15,6 +15,11 @@ run/main_scene="res://title.tscn"
 config/features=PackedStringArray("4.1", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+UserInput="*res://User_Input.gd"
+WireManager="*res://Logic_pice/wire_manager.gd"
+
 [dotnet]
 
 project/assembly_name="circuit_game"

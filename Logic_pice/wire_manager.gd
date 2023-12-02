@@ -1,6 +1,6 @@
 extends Node2D
 
-class_name WireManager
+
 var scene = preload("res://Logic_pice/wire.tscn")
 var instance : Wire
 # Called when the node enters the scene tree for the first time.
@@ -11,12 +11,19 @@ func _ready():
 func _process(delta):
 	pass
 
-func terminal_pressed(terminal : Terminal):
+func pressed(object : Node2D):
+	if(object == null):
+		return
 	instance = scene.instantiate()
-	if(terminal is OutputTerminal):
-		instance.output_terminal = terminal
+	if(object is OutputTerminal):
+		instance.output_terminal = object
 		add_child(instance)
 
-func terminal_released(terminal : Terminal):
-	if(terminal is InputTerminal):
-		instance.input_terminal = terminal
+func released(object : Node2D):
+	#instance is the wire
+	if(instance == null):
+		return 
+	if(object is InputTerminal):
+		instance.input_terminal = object
+	else:
+		instance.queue_free()

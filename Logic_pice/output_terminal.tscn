@@ -1,10 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1447o7qj7b34"]
+[gd_scene load_steps=4 format=3 uid="uid://d1447o7qj7b34"]
 
 [ext_resource type="Script" path="res://Logic_pice/output_terminal.gd" id="1_w36h0"]
 [ext_resource type="Texture2D" uid="uid://cot5xunxhvx2t" path="res://imigs/out.png" id="2_xe133"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ovkv6"]
 
 [node name="Output_terminal" type="Node2D"]
 script = ExtResource("1_w36h0")
 
 [node name="Out" type="Sprite2D" parent="."]
 texture = ExtResource("2_xe133")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(4, 0)
+shape = SubResource("CircleShape2D_ovkv6")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_mouse_exited"]

@@ -29,13 +29,19 @@ Button_path = "res://inventory.tscn"
 position = Vector2(286, 135)
 texture = ExtResource("2_37upc")
 
+[node name="WireManager" parent="." instance=ExtResource("6_vaf7x")]
+
 [node name="Toggle_Button" parent="." instance=ExtResource("3_054qb")]
-position = Vector2(517, 301)
+position = Vector2(527, 281)
+
+[node name="Toggle_Button2" parent="." instance=ExtResource("3_054qb")]
+position = Vector2(531, 372)
 
 [node name="Input_Terminal" parent="." instance=ExtResource("5_up8p0")]
 position = Vector2(749, 378)
 
-[node name="WireManager" parent="." instance=ExtResource("6_vaf7x")]
+[node name="Input_Terminal2" parent="." instance=ExtResource("5_up8p0")]
+position = Vector2(750, 278)
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
