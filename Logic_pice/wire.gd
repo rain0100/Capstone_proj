@@ -12,13 +12,15 @@ func _ready():
 
 func _process(delta):
 	if(input_terminal == null):
-		line2D.points[0] = get_global_mouse_position()
+		line2D.points[0] = Vector2.ZERO
+		line2D.global_position = get_global_mouse_position()
 	else:
-		line2D.points[0] = input_terminal.position
+		line2D.points[0] = Vector2.ZERO
+		line2D.global_position = input_terminal.global_position
 	if (output_terminal == null):
-		line2D.points[1] = get_global_mouse_position()
+		line2D.points[1] = get_global_mouse_position() - line2D.global_position
 	else:
-		line2D.points[1] = output_terminal.position
+		line2D.points[1] = output_terminal.global_position - line2D.global_position
 	if(input_terminal == null or output_terminal == null):
 		return
 	self.set_state(output_terminal.get_state())

@@ -1,27 +1,37 @@
-[gd_scene load_steps=5 format=3 uid="uid://bc7okwygrgbs3"]
+[gd_scene load_steps=6 format=3 uid="uid://c60yworhlyfvy"]
 
-[ext_resource type="Script" path="res://Logic_pice/And.gd" id="1_dgqtm"]
-[ext_resource type="Texture2D" uid="uid://c1vedyqripybd" path="res://imigs/and.png" id="1_hq3d5"]
-[ext_resource type="Texture2D" uid="uid://bey4ohtxi4bp6" path="res://imigs/in.png" id="2_igban"]
-[ext_resource type="Texture2D" uid="uid://cot5xunxhvx2t" path="res://imigs/out.png" id="3_r2w5l"]
+[ext_resource type="Script" path="res://Logic_pice/and_gate.gd" id="1_8fq4o"]
+[ext_resource type="Texture2D" uid="uid://c1vedyqripybd" path="res://imigs/and.png" id="2_qt5du"]
+[ext_resource type="PackedScene" uid="uid://crk8ewvm00l4o" path="res://Logic_pice/input_terminal.tscn" id="3_et7a7"]
+[ext_resource type="PackedScene" uid="uid://d1447o7qj7b34" path="res://Logic_pice/output_terminal.tscn" id="4_or84h"]
 
-[node name="And" type="Node2D"]
-script = ExtResource("1_dgqtm")
+[sub_resource type="CircleShape2D" id="CircleShape2D_5w5ca"]
+radius = 19.0
 
-[node name="input1" type="Sprite2D" parent="."]
-position = Vector2(16.5, 16.5)
-texture = ExtResource("2_igban")
-offset = Vector2(3, -1)
-
-[node name="input2" type="Sprite2D" parent="."]
-position = Vector2(16.5, 36.5)
-texture = ExtResource("2_igban")
-offset = Vector2(3, 0)
+[node name="And_Gate" type="Node2D"]
+script = ExtResource("1_8fq4o")
 
 [node name="And" type="Sprite2D" parent="."]
-position = Vector2(51.5, 26.5)
-texture = ExtResource("1_hq3d5")
+texture = ExtResource("2_qt5du")
 
-[node name="Out" type="Sprite2D" parent="."]
-position = Vector2(84, 27)
-texture = ExtResource("3_r2w5l")
+[node name="Inputs" type="Node2D" parent="."]
+
+[node name="IN0" parent="Inputs" instance=ExtResource("3_et7a7")]
+position = Vector2(-35, -11)
+
+[node name="IN1" parent="Inputs" instance=ExtResource("3_et7a7")]
+position = Vector2(-36, 11)
+
+[node name="Outputs" type="Node2D" parent="."]
+
+[node name="OUT0" parent="Outputs" instance=ExtResource("4_or84h")]
+position = Vector2(31, 0)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-5, 1)
+shape = SubResource("CircleShape2D_5w5ca")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_mouse_exited"]

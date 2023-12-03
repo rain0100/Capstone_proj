@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://c653bbinlubcp"]
 
 [ext_resource type="Script" path="res://Buttons/crea_to_title.gd" id="1_cfpju"]
-[ext_resource type="Texture2D" uid="uid://bhsbpcfw8p1v3" path="res://icon.svg" id="2_37upc"]
 [ext_resource type="PackedScene" uid="uid://cd0tjidll0v8k" path="res://Logic_pice/Toggle_Button.tscn" id="3_054qb"]
+[ext_resource type="PackedScene" uid="uid://c60yworhlyfvy" path="res://Logic_pice/and_gate.tscn" id="4_gq2p1"]
 [ext_resource type="PackedScene" uid="uid://crk8ewvm00l4o" path="res://Logic_pice/input_terminal.tscn" id="5_up8p0"]
 [ext_resource type="PackedScene" uid="uid://1sdrflb7vqch" path="res://Logic_pice/wire_manager.tscn" id="6_vaf7x"]
 
@@ -25,23 +25,31 @@ text = "to the test inventory"
 script = ExtResource("1_cfpju")
 Button_path = "res://inventory.tscn"
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(286, 135)
-texture = ExtResource("2_37upc")
-
 [node name="WireManager" parent="." instance=ExtResource("6_vaf7x")]
 
+[node name="And_Gate" parent="." instance=ExtResource("4_gq2p1")]
+position = Vector2(496, 348)
+
+[node name="And_Gate3" parent="." instance=ExtResource("4_gq2p1")]
+position = Vector2(492, 264)
+
 [node name="Toggle_Button" parent="." instance=ExtResource("3_054qb")]
-position = Vector2(527, 281)
+position = Vector2(22, 258)
+
+[node name="Input_terminal" parent="." instance=ExtResource("5_up8p0")]
+position = Vector2(773, 302)
+
+[node name="And_Gate2" parent="." instance=ExtResource("4_gq2p1")]
+position = Vector2(310, 266)
+
+[node name="And_Gate4" parent="." instance=ExtResource("4_gq2p1")]
+position = Vector2(313, 355)
+
+[node name="And_Gate5" parent="." instance=ExtResource("4_gq2p1")]
+position = Vector2(139, 225)
 
 [node name="Toggle_Button2" parent="." instance=ExtResource("3_054qb")]
-position = Vector2(531, 372)
-
-[node name="Input_Terminal" parent="." instance=ExtResource("5_up8p0")]
-position = Vector2(749, 378)
-
-[node name="Input_Terminal2" parent="." instance=ExtResource("5_up8p0")]
-position = Vector2(750, 278)
+position = Vector2(24, 388)
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
