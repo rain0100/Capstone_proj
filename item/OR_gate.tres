@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dkfcbff7moduw"]
+
+[ext_resource type="Script" path="res://item/item_data.gd" id="1_w4qmp"]
+[ext_resource type="Texture2D" uid="uid://cot5xunxhvx2t" path="res://imigs/out.png" id="2_kaieg"]
+
+[resource]
+script = ExtResource("1_w4qmp")
+name = "OR Gate"
+description = ""
+stackable = false
+texture = ExtResource("2_kaieg")
