@@ -66,6 +66,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Inventory" parent="UI/Control" instance=ExtResource("3_7atcg")]
+visible = false
 layout_mode = 0
 offset_left = 10.0
 offset_top = 10.0
