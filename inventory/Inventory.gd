@@ -7,16 +7,18 @@ signal toggle_inventory()
 
 func _ready() -> void:
 	var inv_data= preload("res://inventory/Inv.tres")
-	populate_item_grid(inv_data.slot_datas)
+	populate_item_grid(inv_data)
 	toggle_inventory.connect(toggle_inventory_interface)
 	
-func populate_item_grid(slot_datas: Array[SlotData])->void:
+func populate_item_grid(inv_data: InventoryData)->void:
 	for child in item_grid.get_children():
 		child.queue_free()
 		
-	for slot_data in slot_datas:
+	for slot_data in inv_data.slot_datas:
 		var slot=Slot.instantiate()
 		item_grid.add_child(slot)
+		
+		slot.slot_clicked.connect(inv_data.on_slot_clicked)
 		
 		if slot_data:
 			slot.set_slot_data(slot_data)
