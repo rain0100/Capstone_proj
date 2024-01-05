@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci64j3t568olr"
-path="res://.godot/imported/title_heder.png-1c66e3531cb13f12d1611a294d30276d.ctex"
+uid="uid://d1tbuukq4tdjh"
+path="res://.godot/imported/not.png-8d78212a23b7df69322bfbd3e9281404.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imigs/title_heder.png"
-dest_files=["res://.godot/imported/title_heder.png-1c66e3531cb13f12d1611a294d30276d.ctex"]
+source_file="res://imigs/not.png"
+dest_files=["res://.godot/imported/not.png-8d78212a23b7df69322bfbd3e9281404.ctex"]
 
 [params]
 
