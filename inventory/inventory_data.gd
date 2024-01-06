@@ -1,7 +1,17 @@
 extends Resource
 class_name InventoryData
 
+signal inventory_interact(inventory_data: InventoryData, index: int, button_index: int)
+
 @export var slot_datas: Array[SlotData]
 
 func on_slot_clicked(index: int, button_index: int) ->void:
-	push_error("INV")
+	inventory_interact.emit(self,index,button_index)
+		
+func grab_slot_data(index: int)-> SlotData:
+	var slot_data=slot_datas[index]
+	
+	if slot_data:
+		return slot_data
+	else:
+		return null

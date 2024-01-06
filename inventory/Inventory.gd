@@ -4,11 +4,13 @@ const Slot= preload("res://inventory/slot.tscn")
 @onready var item_grid: GridContainer= $MarginContainer/GridContainer
 @onready var inventory_interface: PanelContainer= $"."
 signal toggle_inventory()
+var grabbed_slot_data: SlotData
 
 func _ready() -> void:
-	var inv_data= preload("res://inventory/Inv.tres")
-	populate_item_grid(inv_data)
+	var inventory_data= preload("res://inventory/Inv.tres")
+	populate_item_grid(inventory_data)
 	toggle_inventory.connect(toggle_inventory_interface)
+	inventory_data.inventory_interact.connect(on_inventory_interact)
 	
 func populate_item_grid(inv_data: InventoryData)->void:
 	for child in item_grid.get_children():
@@ -28,4 +30,16 @@ func _unhandled_input(event:InputEvent)->void:
 		toggle_inventory.emit()
 
 func toggle_inventory_interface() ->void:
-	inventory_interface.visible=not inventory_interface.visible
+		inventory_interface.visible=not inventory_interface.visible
+	
+func on_inventory_interact(inventory_data: InventoryData, index: int, button_index: int)->void:
+	match [grabbed_slot_data, button_index]:
+		[null, MOUSE_BUTTON_LEFT]:
+			grabbed_slot_data=inventory_data.grab_slot_data(index)
+	
+	push_error(grabbed_slot_data)
+	
+	
+	
+
+
