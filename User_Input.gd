@@ -4,6 +4,8 @@ extends Node2D
 var hovering : Node2D = null
 var dragging : Node2D = null
 
+signal finish_dragging
+
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
@@ -38,4 +40,6 @@ func drag():
 	dragging.global_position = get_global_mouse_position()
 
 func end_drag():
+	var tempDragging = dragging
 	dragging = null
+	finish_dragging.emit(tempDragging)

@@ -28,6 +28,9 @@ Button_path = "res://inventory.tscn"
 
 [node name="WireManager" parent="." instance=ExtResource("6_vaf7x")]
 
+[node name="Inventory" parent="." instance=ExtResource("6_k8xqi")]
+position = Vector2(28, 74)
+
 [node name="And_Gate" parent="." instance=ExtResource("4_gq2p1")]
 position = Vector2(496, 348)
 
@@ -51,9 +54,6 @@ position = Vector2(155, 213)
 
 [node name="Toggle_Button2" parent="." instance=ExtResource("3_054qb")]
 position = Vector2(24, 388)
-
-[node name="Inventory" parent="." instance=ExtResource("6_k8xqi")]
-position = Vector2(28, 74)
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]

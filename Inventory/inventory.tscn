@@ -1,10 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://ce6lmwyg8lxay"]
+[gd_scene load_steps=9 format=3 uid="uid://ce6lmwyg8lxay"]
 
 [ext_resource type="Texture2D" uid="uid://c6n6oi4gbncrj" path="res://Inventory/white.png" id="1_2org7"]
 [ext_resource type="Script" path="res://Inventory/inventory.gd" id="1_vpd3a"]
 [ext_resource type="Texture2D" uid="uid://du8bgg7tt2xkv" path="res://Inventory/square.png" id="2_7dpat"]
 [ext_resource type="PackedScene" uid="uid://c60yworhlyfvy" path="res://Logic_pice/and_gate.tscn" id="3_656nr"]
+[ext_resource type="Script" path="res://Inventory/inventory_area.gd" id="3_eygax"]
 [ext_resource type="Script" path="res://Inventory/Slot.gd" id="3_rpjrb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3qs4r"]
+size = Vector2(413, 520)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g3wo5"]
 texture = ExtResource("2_7dpat")
@@ -17,7 +21,15 @@ offset_left = 710.0
 offset_top = 83.0
 offset_right = 1123.0
 offset_bottom = 604.0
+mouse_filter = 2
 texture = ExtResource("1_2org7")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_eygax")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(918.5, 344)
+shape = SubResource("RectangleShape2D_3qs4r")
 
 [node name="GridContainer" type="GridContainer" parent="."]
 offset_left = 728.0
