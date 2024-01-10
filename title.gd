@@ -1,5 +1,5 @@
-extends Button
-@export var speed: float = 100.0
+extends Control
+const Pickup=preload("res://Logic_pice/and_gate.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,9 +11,7 @@ func _process(delta):
 	pass
 
 
-func _on_pressed():
-	get_tree().change_scene_to_file("res://creative.tscn")
-	pass # Replace with function body.
-
-
-
+func _on_inventory_drop_slot_data(slot_data):
+	var pick_up=Pickup.instantiate()
+	pick_up.position=Vector2.UP
+	add_child(pick_up)

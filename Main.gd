@@ -1,5 +1,5 @@
-extends Button
-@export var speed: float = 100.0
+extends Node
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,9 +11,5 @@ func _process(delta):
 	pass
 
 
-func _on_pressed():
-	get_tree().change_scene_to_file("res://creative.tscn")
+func _on_inventory_drop_slot_data(slot_data):
 	pass # Replace with function body.
-
-
-

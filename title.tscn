@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cq7pwwtwjspik"]
+[gd_scene load_steps=6 format=3 uid="uid://cq7pwwtwjspik"]
 
 [ext_resource type="Script" path="res://Buttons/title_to_crea.gd" id="1_e2keh"]
+[ext_resource type="Script" path="res://title.gd" id="1_y378b"]
 [ext_resource type="PackedScene" uid="uid://c60yworhlyfvy" path="res://Logic_pice/and_gate.tscn" id="2_1ax4v"]
 [ext_resource type="PackedScene" uid="uid://vs1gum7po3ge" path="res://inventory/Inventory.tscn" id="3_7atcg"]
+[ext_resource type="PackedScene" uid="uid://da16n7dvkx8fd" path="res://inventory/slot.tscn" id="4_f0p0l"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -15,6 +17,7 @@ offset_right = 3.0
 offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_y378b")
 
 [node name="title_to_cre_butten" type="Button" parent="."]
 layout_mode = 0
@@ -73,7 +76,16 @@ offset_top = 10.0
 offset_right = 50.0
 offset_bottom = 50.0
 
+[node name="GrabbedSlot" parent="UI/Control" instance=ExtResource("4_f0p0l")]
+visible = false
+modulate = Color(1, 1, 1, 0.470588)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+
 [connection signal="pressed" from="title_to_cre_butten" to="title_to_cre_butten" method="_on_pressed"]
 [connection signal="pressed" from="title_to_cre_butten2" to="title_to_cre_butten2" method="_on_pressed"]
 [connection signal="pressed" from="title_to_cre_butten3" to="title_to_cre_butten3" method="_on_pressed"]
 [connection signal="pressed" from="title_to_cre_butten4" to="title_to_cre_butten4" method="_on_pressed"]
+[connection signal="visibility_changed" from="UI/Control" to="UI/Control/Inventory" method="_on_control_visibility_changed"]
+[connection signal="drop_slot_data" from="UI/Control/Inventory" to="." method="_on_inventory_drop_slot_data"]
+[connection signal="gui_input" from="UI/Control/Inventory" to="UI/Control/Inventory" method="_on_gui_input"]
