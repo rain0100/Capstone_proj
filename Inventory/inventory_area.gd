@@ -1,5 +1,7 @@
 extends Area2D
 
+class_name Inventory_Area 
+
 var hovering_over_inventory = false
 @onready var inventorySlots = $"../GridContainer"
 
@@ -14,16 +16,22 @@ func _process(delta):
 
 func _mouse_enter():
 	hovering_over_inventory = true
-	if UserInput.dragging and hovering_over_inventory:
+	if UserInput.dragging:
 		print("DRAGGING ITEM OVER INVENTORY")
 		
 func _mouse_exit():
 	hovering_over_inventory = false
 	
 func storeItem(item):
-	print("FINISHED DRAGGING")
+	
 	if hovering_over_inventory:
+		print("FINISHED DRAGGING - PLACE ITEM")
 		for invSlot in inventorySlots.get_children():
 			if !invSlot.item:
 				invSlot.slotPut(item)
+				break
+	else:
+		print("FINISHED DRAGGING - TAKE ITEM")
+		var inventoryNode = find_parent("Inventory")
+		inventoryNode.holdingItem = null
 	pass

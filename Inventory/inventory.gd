@@ -30,6 +30,7 @@ func slot_gui_input(event: InputEvent, slot: slotClass):
 					slot.slotPut(holdingItem)
 					holdingItem = tempItem
 			elif slot.item:
+				print("SLOT PICK FUNCTION")
 				tempItem = slot.item.duplicate()
 				holdingItem = tempItem
 #				holdingItem = slot.item

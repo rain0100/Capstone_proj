@@ -1,5 +1,7 @@
 extends Panel
 
+class_name Slot
+
 var ItemClass = preload("res://Logic_pice/and_gate.tscn")
 var item = null
 
@@ -22,6 +24,7 @@ func slotPick():
 	item = null
 	
 func slotPut(new_item):
+	print("SLOT PUT FUNCTION CALLED")
 	item = new_item
 	item.position = Vector2(60,60)
 	var inventoryNode = find_parent("Inventory")
