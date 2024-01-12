@@ -9,6 +9,8 @@ func _input(event):
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.is_pressed():
 				if(hovering is Terminal and Input.is_key_pressed(KEY_SHIFT)):
+					if(hovering is InputTerminal):
+						WireManager.delete(hovering)
 					#this is for draging the wire
 					WireManager.pressed(hovering)
 				#this is for draging the wire
