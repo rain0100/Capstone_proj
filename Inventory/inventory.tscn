@@ -13,6 +13,7 @@ size = Vector2(350.75, 260)
 texture = ExtResource("2_7dpat")
 
 [node name="Inventory" type="Node2D"]
+visible = false
 position = Vector2(-22, -17)
 scale = Vector2(1.0249, 1.00406)
 script = ExtResource("1_vpd3a")
@@ -31,6 +32,7 @@ script = ExtResource("3_eygax")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(198.375, 148)
+scale = Vector2(1.00301, 1)
 shape = SubResource("RectangleShape2D_3qs4r")
 
 [node name="GridContainer" type="GridContainer" parent="."]
@@ -38,6 +40,7 @@ offset_left = 35.0
 offset_top = 25.0
 offset_right = 375.0
 offset_bottom = 275.0
+scale = Vector2(1, 0.9944)
 theme_override_constants/h_separation = 10
 theme_override_constants/v_separation = 10
 columns = 4
