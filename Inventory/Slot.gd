@@ -19,17 +19,17 @@ func _process(delta):
 
 func slotPick():
 	remove_child(item)
-	var inventoryNode = find_parent("Node2D")
-	inventoryNode.add_child(item)
+	var parentNode = find_parent("Node2D")
+	parentNode.add_child(item)
 	item = null
 	
 func slotPut(new_item):
-	print("SLOT PUT FUNCTION CALLED")
-	print(new_item)
+	# print("SLOT PUT FUNCTION CALLED")
+	# print(new_item)
 	item = new_item
 	item.position = Vector2(60,60)
-	var inventoryNode = find_parent("Node2D")
-	inventoryNode.remove_child(item)
+	var parentNode = find_parent("Node2D")
+	parentNode.remove_child(item)
 	add_child(item)
 #	print("LIST OF CHILDREN for SLOT ", get_index(), ": ", get_children())
 	
