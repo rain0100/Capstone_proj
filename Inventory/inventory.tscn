@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://Inventory/Slot.gd" id="3_rpjrb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3qs4r"]
-size = Vector2(413, 520)
+size = Vector2(534, 393)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g3wo5"]
 texture = ExtResource("2_7dpat")
@@ -16,10 +16,10 @@ texture = ExtResource("2_7dpat")
 script = ExtResource("1_vpd3a")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 710.0
-offset_top = 83.0
-offset_right = 1123.0
-offset_bottom = 604.0
+offset_left = 24.0
+offset_top = 18.0
+offset_right = 563.0
+offset_bottom = 420.0
 mouse_filter = 2
 texture = ExtResource("1_2org7")
 
@@ -27,17 +27,17 @@ texture = ExtResource("1_2org7")
 script = ExtResource("3_eygax")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(918.5, 344)
+position = Vector2(293, 215.5)
 shape = SubResource("RectangleShape2D_3qs4r")
 
 [node name="GridContainer" type="GridContainer" parent="."]
-offset_left = 728.0
-offset_top = 90.0
-offset_right = 1108.0
-offset_bottom = 600.0
+offset_left = 42.0
+offset_top = 25.0
+offset_right = 560.0
+offset_bottom = 412.0
 theme_override_constants/h_separation = 10
 theme_override_constants/v_separation = 10
-columns = 3
+columns = 4
 
 [node name="Slot1" type="Panel" parent="GridContainer"]
 custom_minimum_size = Vector2(120, 120)

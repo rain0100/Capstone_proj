@@ -4,13 +4,16 @@ class_name Inventory
 
 const slotClass = preload("res://Inventory/Slot.gd")
 @onready var inventorySlots = $GridContainer
+@onready var inventory_interface = $"."
 var holdingItem = null
 var tempItem = null
+signal toggle_inventory()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	for invSlot in inventorySlots.get_children():
 		invSlot.gui_input.connect(slot_gui_input.bind(invSlot))
+		toggle_inventory.connect(toggle_inventory_interface)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -46,3 +49,11 @@ func slot_gui_input(event: InputEvent, slot: slotClass):
 func _input(event):
 	if holdingItem:
 		holdingItem.global_position = get_global_mouse_position()
+
+
+func _unhandled_input(event:InputEvent)->void:
+	if Input.is_action_just_pressed("toggle_inventory"):
+		toggle_inventory.emit() 
+
+func toggle_inventory_interface() ->void:
+		inventory_interface.visible=not inventory_interface.visible
