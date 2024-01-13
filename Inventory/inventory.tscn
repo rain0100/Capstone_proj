@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://ce6lmwyg8lxay"]
+[gd_scene load_steps=8 format=3 uid="uid://ce6lmwyg8lxay"]
 
 [ext_resource type="Texture2D" uid="uid://c6n6oi4gbncrj" path="res://Inventory/white.png" id="1_2org7"]
 [ext_resource type="Script" path="res://Inventory/inventory.gd" id="1_vpd3a"]
 [ext_resource type="Texture2D" uid="uid://du8bgg7tt2xkv" path="res://Inventory/square.png" id="2_7dpat"]
-[ext_resource type="PackedScene" uid="uid://c60yworhlyfvy" path="res://Logic_pice/and_gate.tscn" id="3_656nr"]
 [ext_resource type="Script" path="res://Inventory/inventory_area.gd" id="3_eygax"]
 [ext_resource type="Script" path="res://Inventory/Slot.gd" id="3_rpjrb"]
 
@@ -111,7 +110,3 @@ custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_g3wo5")
 script = ExtResource("3_rpjrb")
-
-[node name="And_Gate" parent="." instance=ExtResource("3_656nr")]
-z_index = 1
-position = Vector2(177, 382)

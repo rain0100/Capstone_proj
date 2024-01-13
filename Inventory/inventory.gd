@@ -14,6 +14,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+#	for invSlot in inventorySlots.get_children():
+#		print(invSlot.get_children())
 	pass
 	
 func slot_gui_input(event: InputEvent, slot: slotClass):
