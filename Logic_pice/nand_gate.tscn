@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://dntj6a7yxmak5"]
+
+[ext_resource type="Texture2D" uid="uid://dnt3lcbqb40dx" path="res://imigs/nand.png" id="1_iciro"]
+[ext_resource type="Script" path="res://Logic_pice/nand_gate.gd" id="1_l60u5"]
+[ext_resource type="PackedScene" uid="uid://crk8ewvm00l4o" path="res://Logic_pice/input_terminal.tscn" id="3_4uxwp"]
+[ext_resource type="PackedScene" uid="uid://d1447o7qj7b34" path="res://Logic_pice/output_terminal.tscn" id="4_vmu84"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0e2hg"]
+
+[node name="Nand_Gate" type="Node2D"]
+script = ExtResource("1_l60u5")
+
+[node name="Nand" type="Sprite2D" parent="."]
+texture = ExtResource("1_iciro")
+
+[node name="Inputs" type="Node2D" parent="."]
+
+[node name="IN0" parent="Inputs" instance=ExtResource("3_4uxwp")]
+position = Vector2(-36, -11)
+
+[node name="IN1" parent="Inputs" instance=ExtResource("3_4uxwp")]
+position = Vector2(-36, 11)
+
+[node name="Outputs" type="Node2D" parent="."]
+
+[node name="OUT0" parent="Outputs" instance=ExtResource("4_vmu84")]
+position = Vector2(36, 0)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_0e2hg")
+one_way_collision_margin = 0.0
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_mouse_exited"]

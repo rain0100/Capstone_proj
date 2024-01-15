@@ -2,7 +2,7 @@ extends Node2D
 
 
 var scene = preload("res://Logic_pice/wire.tscn")
-var instance : Wire
+var wireobj : Wire
 var is_drawing : bool = false
 
 # Called when the node enters the scene tree for the first time.
@@ -19,16 +19,28 @@ func pressed(object : Node2D):
 	if(object is OutputTerminal):
 		is_drawing = true
 		#rename instance to wireobject
-		instance = scene.instantiate()
-		instance.output_terminal = object
-		add_child(instance)
+		wireobj = scene.instantiate()
+		wireobj.output_terminal = object
+		add_sibling(wireobj)
+		
+		#add_child(wireobj)
+	#nead to maek one to delet wire 
+	#will do this by cliking on inputtermanal
 
 func released(object : Node2D):
 	#instance is the wire
-	if(instance == null or is_drawing == false):
+	if(wireobj == null or is_drawing == false):
 		return 
 	is_drawing = false
 	if(object is InputTerminal):
-		instance.input_terminal = object
+		wireobj.input_terminal = object
+		object.connected_wire = wireobj
 	else:
-		instance.queue_free()
+		wireobj.queue_free()
+
+func delete(object:InputTerminal):
+	if(object == null or object.connected_wire == null):
+		return 
+	object.connected_wire.queue_free()
+	object.connected_wire = null
+	

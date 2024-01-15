@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://5dmbflgxfno1"]
+
+[ext_resource type="Script" path="res://Xor_gate.gd" id="1_wdalm"]
+[ext_resource type="Texture2D" uid="uid://b8jnohx72mixv" path="res://imigs/xor.png" id="2_fd8ge"]
+[ext_resource type="PackedScene" uid="uid://crk8ewvm00l4o" path="res://Logic_pice/input_terminal.tscn" id="3_dtt7g"]
+[ext_resource type="PackedScene" uid="uid://d1447o7qj7b34" path="res://Logic_pice/output_terminal.tscn" id="4_n6sud"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x8i84"]
+radius = 21.2132
+
+[node name="Xor_gate" type="Node2D"]
+script = ExtResource("1_wdalm")
+
+[node name="Xor" type="Sprite2D" parent="."]
+texture = ExtResource("2_fd8ge")
+
+[node name="Inputs" type="Node2D" parent="."]
+
+[node name="IN0" parent="Inputs" instance=ExtResource("3_dtt7g")]
+position = Vector2(-37, -11)
+
+[node name="IN1" parent="Inputs" instance=ExtResource("3_dtt7g")]
+position = Vector2(-37, 11)
+
+[node name="Outputs" type="Node2D" parent="."]
+
+[node name="OUT0" parent="Outputs" instance=ExtResource("4_n6sud")]
+position = Vector2(37, 0)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, -1)
+shape = SubResource("CircleShape2D_x8i84")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_mouse_exited"]
