@@ -1,0 +1,112 @@
+[gd_scene load_steps=8 format=3 uid="uid://ce6lmwyg8lxay"]
+
+[ext_resource type="Texture2D" uid="uid://c6n6oi4gbncrj" path="res://Inventory/white.png" id="1_2org7"]
+[ext_resource type="Script" path="res://Inventory/inventory.gd" id="1_vpd3a"]
+[ext_resource type="Texture2D" uid="uid://du8bgg7tt2xkv" path="res://Inventory/square.png" id="2_7dpat"]
+[ext_resource type="Script" path="res://Inventory/inventory_area.gd" id="3_eygax"]
+[ext_resource type="Script" path="res://Inventory/Slot.gd" id="3_rpjrb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3qs4r"]
+size = Vector2(413, 520)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g3wo5"]
+texture = ExtResource("2_7dpat")
+
+[node name="Inventory" type="Node2D"]
+script = ExtResource("1_vpd3a")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 710.0
+offset_top = 83.0
+offset_right = 1123.0
+offset_bottom = 604.0
+mouse_filter = 2
+texture = ExtResource("1_2org7")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_eygax")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(918.5, 344)
+shape = SubResource("RectangleShape2D_3qs4r")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = 728.0
+offset_top = 90.0
+offset_right = 1108.0
+offset_bottom = 600.0
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 3
+
+[node name="Slot1" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g3wo5")
+script = ExtResource("3_rpjrb")
+
+[node name="Slot2" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g3wo5")
+script = ExtResource("3_rpjrb")
+
+[node name="Slot3" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g3wo5")
+script = ExtResource("3_rpjrb")
+
+[node name="Slot4" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g3wo5")
+script = ExtResource("3_rpjrb")
+
+[node name="Slot5" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g3wo5")
+script = ExtResource("3_rpjrb")
+
+[node name="Slot6" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g3wo5")
+script = ExtResource("3_rpjrb")
+
+[node name="Slot7" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g3wo5")
+script = ExtResource("3_rpjrb")
+
+[node name="Slot8" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g3wo5")
+script = ExtResource("3_rpjrb")
+
+[node name="Slot9" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g3wo5")
+script = ExtResource("3_rpjrb")
+
+[node name="Slot10" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g3wo5")
+script = ExtResource("3_rpjrb")
+
+[node name="Slot11" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g3wo5")
+script = ExtResource("3_rpjrb")
+
+[node name="Slot12" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g3wo5")
+script = ExtResource("3_rpjrb")

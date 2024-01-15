@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cq7pwwtwjspik"]
 
 [ext_resource type="Script" path="res://Buttons/title_to_crea.gd" id="1_e2keh"]
-[ext_resource type="PackedScene" uid="uid://bc7okwygrgbs3" path="res://Logic_pice/and_gate.tscn" id="2_1ax4v"]
+[ext_resource type="PackedScene" uid="uid://c60yworhlyfvy" path="res://Logic_pice/and_gate.tscn" id="2_1ax4v"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
