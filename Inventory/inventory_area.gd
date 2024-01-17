@@ -9,11 +9,6 @@ var hovering_over_inventory = false
 func _ready():
 	UserInput.finish_dragging.connect(storeItem)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 func _mouse_enter():
 	hovering_over_inventory = true
 	# if UserInput.dragging:

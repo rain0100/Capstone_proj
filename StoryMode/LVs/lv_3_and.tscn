@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dlyuw0fki7wco"]
+
+[ext_resource type="PackedScene" uid="uid://cd0tjidll0v8k" path="res://Logic_pice/Toggle_Button.tscn" id="1_tx6tb"]
+[ext_resource type="PackedScene" uid="uid://crk8ewvm00l4o" path="res://Logic_pice/input_terminal.tscn" id="2_prorr"]
+[ext_resource type="PackedScene" uid="uid://c60yworhlyfvy" path="res://Logic_pice/and_gate.tscn" id="3_yn6yk"]
+[ext_resource type="PackedScene" uid="uid://4pavgxtipt33" path="res://Buttons/Back_to_StoryMode.tscn" id="4_416n5"]
+
+[node name="LV3_And" type="Node2D"]
+
+[node name="Toggle_Button" parent="." instance=ExtResource("1_tx6tb")]
+position = Vector2(290, 190)
+
+[node name="Input_terminal" parent="." instance=ExtResource("2_prorr")]
+position = Vector2(725, 213)
+
+[node name="And_Gate" parent="." instance=ExtResource("3_yn6yk")]
+position = Vector2(512, 223)
+
+[node name="Toggle_Button2" parent="." instance=ExtResource("1_tx6tb")]
+position = Vector2(291, 288)
+
+[node name="Back_to_StoryMode" parent="." instance=ExtResource("4_416n5")]
+position = Vector2(1055, 21)

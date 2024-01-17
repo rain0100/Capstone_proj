@@ -15,36 +15,38 @@ func _ready():
 		invSlot.gui_input.connect(slot_gui_input.bind(invSlot))
 		toggle_inventory.connect(toggle_inventory_interface)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-#	for invSlot in inventorySlots.get_children():
-#		print(invSlot.get_children())
-	pass
-	
+#to chose if we put something in or take it out	
 func slot_gui_input(event: InputEvent, slot: slotClass):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT && event.pressed:
+			#if we grabe something
 			if holdingItem != null:
-				if !slot.item:
+				#bad line
+				if !slot.item and holdingItem.input_terminal[0].connected_wire == 100:
 					slot.slotPut(holdingItem)
 					holdingItem = null
 				else:
-					var tempItem = slot.item
+					tempItem = slot.item
 					slot.slotPick()
 					tempItem.global_position = event.global_position
 					slot.slotPut(holdingItem)
 					holdingItem = tempItem
+			#this is to doplicate
 			elif slot.item:
-				# print("SLOT PICK FUNCTION")
-				tempItem = slot.item.duplicate()
-				holdingItem = tempItem
-#				holdingItem = slot.item
-				slot.slotPick()
-				holdingItem.global_position = get_global_mouse_position()
+				duplicate_item(slot)
 		
 		if event.button_index == MOUSE_BUTTON_RIGHT && event.pressed:
 			if slot.item:
 				slot.deleteItem()
+
+func duplicate_item(slot):
+		# print("SLOT PICK FUNCTION")
+		tempItem = slot.item.duplicate()
+		holdingItem = tempItem
+		#holdingItem = slot.item
+		slot.slotPick()
+		holdingItem.global_position = get_global_mouse_position()
+
 
 func _input(event):
 	if holdingItem:

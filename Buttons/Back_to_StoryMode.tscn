@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://4pavgxtipt33"]
+
+[ext_resource type="Script" path="res://Buttons/Level_select.gd" id="1_t8cmc"]
+
+[node name="Back_to_StoryMode" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+offset_right = 77.0
+offset_bottom = 52.0
+text = "BACK"
+script = ExtResource("1_t8cmc")
+Button_path = "res://StoryMode/story_mode.tscn"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
