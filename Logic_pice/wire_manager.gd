@@ -1,6 +1,6 @@
 extends Node2D
 
-
+#testing branch - suhru
 var scene = preload("res://Logic_pice/wire.tscn")
 var wireobj : Wire
 var is_drawing : bool = false
