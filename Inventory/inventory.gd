@@ -14,13 +14,6 @@ func _ready():
 	for invSlot in inventorySlots.get_children():
 		invSlot.gui_input.connect(slot_gui_input.bind(invSlot))
 		toggle_inventory.connect(toggle_inventory_interface)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-#	for invSlot in inventorySlots.get_children():
-#		print(invSlot.get_children())
-#	print(holdingItem)
-	pass
 	
 func slot_gui_input(event: InputEvent, slot: slotClass):
 	if event is InputEventMouseButton:

@@ -11,10 +11,6 @@ func _ready():
 		item = ItemClass.instantiate()
 		item.position = Vector2(37.5,37.5)	#place in middle of inventory box
 		add_child(item) 
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
 func slotPick():
 	remove_child(item)
