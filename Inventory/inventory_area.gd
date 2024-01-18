@@ -27,6 +27,10 @@ func storeItem(item):
 				# print("CALLING SLOT PUT IN LOOP")
 				invSlot.slotPut(item)
 				break
+			else:
+				print("ITEM")
+				print(invSlot.item)
+		print("DONE ---------")
 	else:
 		# print("FINISHED DRAGGING - TAKE ITEM")
 		var inventoryNode = find_parent("Inventory")
