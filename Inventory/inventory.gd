@@ -5,8 +5,6 @@ class_name Inventory
 const slotClass = preload("res://Inventory/Slot.gd")
 @onready var inventorySlots = $GridContainer
 @onready var inventory_interface = $"."
-var holdingItem = null
-var tempItem = null
 signal toggle_inventory()
 
 # Called when the node enters the scene tree for the first time.
@@ -17,36 +15,15 @@ func _ready():
 	
 func slot_gui_input(event: InputEvent, slot: slotClass):
 	if event is InputEventMouseButton:
+		# if item in inventory is left clicked, duplicate it
 		if event.button_index == MOUSE_BUTTON_LEFT && event.pressed:
-			if holdingItem != null:
-				if !slot.item:
-					slot.slotPut(holdingItem)
-					holdingItem = null
-				else:
-					var tempItem = slot.item
-					slot.slotPick()
-					tempItem.global_position = event.global_position
-					slot.slotPut(holdingItem)
-					holdingItem = tempItem
-			elif slot.item:
-				# print("SLOT PICK FUNCTION")
+			if slot.item:
 				slot.duplicateItem()
-				print("Inventory Items")
-				for invSlot in inventorySlots.get_children():
-					print(invSlot.get_children())
-#				tempItem = slot.item.duplicate()
-#				holdingItem = tempItem
-##				holdingItem = slot.item
-#				slot.slotPick()
-#				holdingItem.global_position = get_global_mouse_position()
 		
+		# if item in inventory is right clicked, delete it
 		if event.button_index == MOUSE_BUTTON_RIGHT && event.pressed:
 			if slot.item:
 				slot.deleteItem()
-
-func _input(event):
-	if holdingItem:
-		holdingItem.global_position = get_global_mouse_position()
 
 
 func _unhandled_input(event:InputEvent)->void:

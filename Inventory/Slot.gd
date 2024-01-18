@@ -11,37 +11,23 @@ func _ready():
 		item = ItemClass.instantiate()
 		item.position = Vector2(37.5,37.5)	#place in middle of inventory box
 		add_child(item) 
-
-func slotPick():
-	remove_child(item)
-	var parentNode = find_parent("Node2D")
-	parentNode.add_child(item)
-	item = null
 	
+# place item into a slot
 func slotPut(new_item):
-	# print("SLOT PUT FUNCTION CALLED")
-	# print(new_item)
 	item = new_item
 	item.position = Vector2(37.5,37.5)
 	var parentNode = find_parent("Node2D")
 	parentNode.remove_child(item)
 	add_child(item)
-#	print("LIST OF CHILDREN for SLOT ", get_index(), ": ", get_children())
 	
+# creates a duplicate of the selected item and puts it in the play area node
 func duplicateItem():
 	var parentNode = find_parent("Node2D")
 	var copyItem = item.duplicate()
 	parentNode.add_child(copyItem)
 	pass
 	
+# removes an item from the inventory
 func deleteItem():
 	remove_child(item)
 	item = null
-
-#for draging
-func _on_mouse_entered():
-	UserInput.hovering = self.item
-
-
-func _on_mouse_exited():
-	UserInput.hovering = null
