@@ -25,7 +25,6 @@ func duplicateItem():
 	var parentNode = find_parent("Node2D")
 	var copyItem = item.duplicate()
 	parentNode.add_child(copyItem)
-	pass
 	
 # removes an item from the inventory
 func deleteItem():
