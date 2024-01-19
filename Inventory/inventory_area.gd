@@ -8,11 +8,6 @@ var hovering_over_inventory = false		#flags whether the cursor is hovering over 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	UserInput.finish_dragging.connect(storeItem)
-
-func _process(delta):
-	# prevents items in inventory from being dragged
-	if hovering_over_inventory:
-		UserInput.hovering = null
 	
 # called when mouse cursor enters the inventory hitbox
 func _mouse_enter():
