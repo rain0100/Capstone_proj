@@ -17,7 +17,12 @@ func _input(event):
 					WireManager.pressed(hovering)
 				#this is for draging the wire
 				else:
-					begin_drag(hovering)
+					if hovering is Gate:
+						# prevents items in inventory from being dragged
+						if not(hovering.get_parent() is Slot):
+							begin_drag(hovering)
+					else:
+						begin_drag(hovering)
 						
 			#this is the start of relesing stuff
 			elif event.is_released():
