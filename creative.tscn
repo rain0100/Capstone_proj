@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c653bbinlubcp"]
+[gd_scene load_steps=12 format=3 uid="uid://c653bbinlubcp"]
 
 [ext_resource type="Script" path="res://Buttons/crea_to_title.gd" id="1_cfpju"]
 [ext_resource type="PackedScene" uid="uid://cd0tjidll0v8k" path="res://Logic_pice/Toggle_Button.tscn" id="3_054qb"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://5dmbflgxfno1" path="res://Logic_pice/xor_gate.tscn" id="7_tmtfv"]
 [ext_resource type="PackedScene" uid="uid://df2rhqx7qpx0k" path="res://Logic_pice/or_gate.tscn" id="8_xqsmq"]
 [ext_resource type="PackedScene" uid="uid://c60yworhlyfvy" path="res://Logic_pice/and_gate.tscn" id="10_snmy1"]
+[ext_resource type="PackedScene" uid="uid://cvdccuv5hqqnh" path="res://Logic_pice/clock.tscn" id="11_kp1q6"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -41,9 +42,6 @@ position = Vector2(22, 258)
 [node name="Input_terminal" parent="." instance=ExtResource("5_up8p0")]
 position = Vector2(677, 299)
 
-[node name="Toggle_Button2" parent="." instance=ExtResource("3_054qb")]
-position = Vector2(24, 388)
-
 [node name="Not_Gate" parent="." instance=ExtResource("6_ud448")]
 position = Vector2(135, 192)
 
@@ -67,6 +65,9 @@ position = Vector2(331, 459)
 
 [node name="And_Gate" parent="." instance=ExtResource("10_snmy1")]
 position = Vector2(514, 519)
+
+[node name="clock" parent="." instance=ExtResource("11_kp1q6")]
+position = Vector2(44.2506, 381.618)
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]

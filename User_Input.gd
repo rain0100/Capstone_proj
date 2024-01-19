@@ -21,8 +21,13 @@ func _input(event):
 						# prevents items in inventory from being dragged
 						if not(hovering.get_parent() is Slot):
 							begin_drag(hovering)
-					else:
-						begin_drag(hovering)
+					
+					elif hovering is Terminal:
+						# lock position of gate input and output terminals
+						if hovering.get_parent().get_parent() is Gate:
+							begin_drag(hovering.get_parent().get_parent())
+						else:
+							begin_drag(hovering)
 						
 			#this is the start of relesing stuff
 			elif event.is_released():
@@ -35,6 +40,8 @@ func _input(event):
 		if event.button_index == MOUSE_BUTTON_RIGHT:
 			if(hovering is ToggleButton and event.is_pressed()):
 				hovering.toggle()
+			elif (hovering is Clock and event.is_pressed()):
+				hovering.toggleClock()
 				
 func _process(delta):
 	if dragging != null:
