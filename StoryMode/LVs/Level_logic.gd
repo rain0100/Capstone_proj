@@ -2,17 +2,17 @@ extends Node
 
 class_name GeneralLevel
 
-var level_complete = false
+var levels: Array[bool] = [false, false, false, false, false, false, false, false, false, false]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+	$LV3_And.disabled = !levels[2]
 	pass
 
-func pass_level():
-	print("Congrats! Level Passed!")
-	level_complete = true
+func pass_level(LV_num):
+	print("Congrats! Level ", LV_num + 1, " Passed!")
+	levels[LV_num] = true
+	print(levels)
+
+
+

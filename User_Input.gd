@@ -40,7 +40,7 @@ func _input(event):
 		if event.button_index == MOUSE_BUTTON_RIGHT:
 			if(hovering is ToggleButton and event.is_pressed()):
 				hovering.toggle()
-			elif (hovering is Clock and event.is_pressed()):
+			elif(hovering is Clock and event.is_pressed()):
 				hovering.toggleClock()
 				
 func _process(delta):

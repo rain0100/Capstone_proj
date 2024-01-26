@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://dffddkkprwleo"]
 
-[ext_resource type="Script" path="res://StoryMode/Story Mode.gd" id="1_7cra1"]
+[ext_resource type="Script" path="res://StoryMode/LVs/Level_logic.gd" id="1_ylvpw"]
 [ext_resource type="Script" path="res://Buttons/Level_select.gd" id="2_1nhlc"]
 
 [node name="Story Mode" type="Node2D"]
 position = Vector2(41, 17)
-script = ExtResource("1_7cra1")
+script = ExtResource("1_ylvpw")
 
 [node name="LV1_Wire" type="Button" parent="."]
 offset_left = 222.0
