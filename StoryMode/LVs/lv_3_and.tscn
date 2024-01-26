@@ -11,10 +11,10 @@
 position = Vector2(290, 190)
 
 [node name="Input_terminal" parent="." instance=ExtResource("2_prorr")]
-position = Vector2(725, 213)
+position = Vector2(731, 224)
 
 [node name="And_Gate" parent="." instance=ExtResource("3_yn6yk")]
-position = Vector2(512, 223)
+position = Vector2(506, 226)
 
 [node name="Toggle_Button2" parent="." instance=ExtResource("1_tx6tb")]
 position = Vector2(291, 288)

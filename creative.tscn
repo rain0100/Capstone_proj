@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bme420ms646bh" path="res://Inventory/inventory.tscn" id="6_k8xqi"]
 [ext_resource type="PackedScene" uid="uid://cjf6rgr5b8rfi" path="res://Logic_pice/not_gate.tscn" id="6_ud448"]
 [ext_resource type="PackedScene" uid="uid://1sdrflb7vqch" path="res://Logic_pice/wire_manager.tscn" id="6_vaf7x"]
-[ext_resource type="PackedScene" path="res://Logic_pice/clock.tscn" id="11_kp1q6"]
+[ext_resource type="PackedScene" uid="uid://cvdccuv5hqqnh" path="res://Logic_pice/clock.tscn" id="11_kp1q6"]
 
 [node name="Node2D" type="Node2D"]
 

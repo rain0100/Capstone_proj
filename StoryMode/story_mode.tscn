@@ -62,15 +62,15 @@ script = ExtResource("2_1nhlc")
 Button_path = "res://StoryMode/LVs/lv_5_nand_nor.tscn"
 metadata/_edit_use_anchors_ = true
 
-[node name="Button6" type="Button" parent="."]
+[node name="LV6_XOr" type="Button" parent="."]
 offset_left = 424.0
 offset_top = 4.0
 offset_right = 500.0
 offset_bottom = 38.0
-text = "LV1:Wire
+text = "LV6:XOr
 "
 script = ExtResource("2_1nhlc")
-Button_path = "res://StoryMode/LVs/lv_1_wire.tscn"
+Button_path = "res://StoryMode/LVs/lv_6_xor.tscn"
 metadata/_edit_use_anchors_ = true
 
 [node name="Button7" type="Button" parent="."]
@@ -78,10 +78,10 @@ offset_left = 425.0
 offset_top = 55.0
 offset_right = 501.0
 offset_bottom = 89.0
-text = "LV1:Wire
+text = "LV7:NOr with Nand
 "
 script = ExtResource("2_1nhlc")
-Button_path = "res://StoryMode/LVs/lv_1_wire.tscn"
+Button_path = "res://StoryMode/LVs/lv_7_nor_with_n_and.tscn"
 metadata/_edit_use_anchors_ = true
 
 [node name="Button8" type="Button" parent="."]
@@ -89,29 +89,29 @@ offset_left = 425.0
 offset_top = 100.0
 offset_right = 501.0
 offset_bottom = 134.0
-text = "LV1:Wire
+text = "LV8:A*(B+~C)+D
 "
 script = ExtResource("2_1nhlc")
 Button_path = "res://StoryMode/LVs/lv_1_wire.tscn"
 metadata/_edit_use_anchors_ = true
 
-[node name="Button9" type="Button" parent="."]
+[node name="LV9_mux" type="Button" parent="."]
 offset_left = 423.0
 offset_top = 153.0
 offset_right = 499.0
 offset_bottom = 187.0
-text = "LV1:Wire
+text = "LV9:Mux
 "
 script = ExtResource("2_1nhlc")
 Button_path = "res://StoryMode/LVs/lv_1_wire.tscn"
 metadata/_edit_use_anchors_ = true
 
-[node name="Button10" type="Button" parent="."]
+[node name="LV10_Register" type="Button" parent="."]
 offset_left = 426.0
 offset_top = 199.0
 offset_right = 502.0
 offset_bottom = 233.0
-text = "LV1:Wire
+text = "LV10:Register
 "
 script = ExtResource("2_1nhlc")
 Button_path = "res://StoryMode/LVs/lv_1_wire.tscn"
@@ -122,8 +122,8 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="LV3_And" to="LV3_And" method="_on_pressed"]
 [connection signal="pressed" from="LV4_Or" to="LV4_Or" method="_on_pressed"]
 [connection signal="pressed" from="LV5_Nand_Nor" to="LV5_Nand_Nor" method="_on_pressed"]
-[connection signal="pressed" from="Button6" to="Button6" method="_on_pressed"]
+[connection signal="pressed" from="LV6_XOr" to="LV6_XOr" method="_on_pressed"]
 [connection signal="pressed" from="Button7" to="Button7" method="_on_pressed"]
 [connection signal="pressed" from="Button8" to="Button8" method="_on_pressed"]
-[connection signal="pressed" from="Button9" to="Button9" method="_on_pressed"]
-[connection signal="pressed" from="Button10" to="Button10" method="_on_pressed"]
+[connection signal="pressed" from="LV9_mux" to="LV9_mux" method="_on_pressed"]
+[connection signal="pressed" from="LV10_Register" to="LV10_Register" method="_on_pressed"]

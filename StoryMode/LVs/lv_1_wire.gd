@@ -11,7 +11,6 @@ var cri_false: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	levels[6] = true 
 	pass # Replace with function body.
 
 

@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://caj2mw7r2nbae"]
+
+[ext_resource type="PackedScene" uid="uid://cd0tjidll0v8k" path="res://Logic_pice/Toggle_Button.tscn" id="1_3twcb"]
+[ext_resource type="PackedScene" uid="uid://c60yworhlyfvy" path="res://Logic_pice/and_gate.tscn" id="2_lc784"]
+[ext_resource type="PackedScene" uid="uid://df2rhqx7qpx0k" path="res://Logic_pice/or_gate.tscn" id="3_71ead"]
+[ext_resource type="PackedScene" uid="uid://cjf6rgr5b8rfi" path="res://Logic_pice/not_gate.tscn" id="4_v36mm"]
+
+[node name="lv_8_A*(B+~C)+D" type="Node2D"]
+
+[node name="Toggle_Button" parent="." instance=ExtResource("1_3twcb")]
+position = Vector2(118, 86)
+
+[node name="Toggle_Button2" parent="." instance=ExtResource("1_3twcb")]
+position = Vector2(124, 173)
+
+[node name="Toggle_Button3" parent="." instance=ExtResource("1_3twcb")]
+position = Vector2(126, 260)
+
+[node name="Toggle_Button4" parent="." instance=ExtResource("1_3twcb")]
+position = Vector2(126, 325)
+
+[node name="And_Gate" parent="." instance=ExtResource("2_lc784")]
+position = Vector2(481, 101)
+
+[node name="Or_Gate" parent="." instance=ExtResource("3_71ead")]
+position = Vector2(336, 180)
+
+[node name="Not_Gate" parent="." instance=ExtResource("4_v36mm")]
+position = Vector2(243, 251)
+
+[node name="Or_Gate2" parent="." instance=ExtResource("3_71ead")]
+position = Vector2(646, 249)
