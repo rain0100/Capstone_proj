@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://ltyx30vse8rp"]
+[gd_scene load_steps=7 format=3 uid="uid://ltyx30vse8rp"]
 
+[ext_resource type="Script" path="res://StoryMode/LVs/lv_5_nand_nor.gd" id="1_ce2x2"]
 [ext_resource type="PackedScene" uid="uid://dntj6a7yxmak5" path="res://Logic_pice/nand_gate.tscn" id="1_x7234"]
 [ext_resource type="PackedScene" uid="uid://cd0tjidll0v8k" path="res://Logic_pice/Toggle_Button.tscn" id="2_uoqx3"]
 [ext_resource type="PackedScene" uid="uid://3anyt0st1dy4" path="res://Logic_pice/nor_gate.tscn" id="5_hwysy"]
@@ -7,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://4pavgxtipt33" path="res://Buttons/Back_to_StoryMode.tscn" id="6_150ho"]
 
 [node name="LV5_Nand_Nor" type="Node2D"]
+script = ExtResource("1_ce2x2")
 
 [node name="Nand_Gate" parent="." instance=ExtResource("1_x7234")]
 position = Vector2(714, 430)
@@ -29,6 +31,9 @@ position = Vector2(966, 426)
 [node name="Back_to_StoryMode" parent="." instance=ExtResource("6_150ho")]
 position = Vector2(1060, 19)
 
+[node name="Nor_Gate" parent="." instance=ExtResource("5_hwysy")]
+position = Vector2(385.365, 324.605)
+
 [node name="Label" type="Label" parent="."]
 offset_left = 326.0
 offset_top = 66.0
@@ -38,6 +43,3 @@ text = "Rools:
 -to beat this lv make all the outputs Flase
 -Togle butens can only conect to 1 thing
 -use all gates"
-
-[node name="Nor_Gate" parent="." instance=ExtResource("5_hwysy")]
-position = Vector2(385.365, 324.605)
