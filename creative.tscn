@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://c653bbinlubcp"]
+[gd_scene load_steps=9 format=3 uid="uid://c653bbinlubcp"]
 
 [ext_resource type="Script" path="res://Buttons/crea_to_title.gd" id="1_cfpju"]
 [ext_resource type="PackedScene" uid="uid://cd0tjidll0v8k" path="res://Logic_pice/Toggle_Button.tscn" id="3_054qb"]
 [ext_resource type="PackedScene" uid="uid://crk8ewvm00l4o" path="res://Logic_pice/input_terminal.tscn" id="5_up8p0"]
-[ext_resource type="PackedScene" uid="uid://dntj6a7yxmak5" path="res://Logic_pice/nand_gate.tscn" id="6_e4303"]
-[ext_resource type="PackedScene" uid="uid://cjf6rgr5b8rfi" path="res://Logic_pice/not_gate.tscn" id="6_ud448"]
+[ext_resource type="PackedScene" path="res://Logic_pice/nand_gate.tscn" id="6_e4303"]
+[ext_resource type="PackedScene" path="res://Logic_pice/not_gate.tscn" id="6_ud448"]
 [ext_resource type="PackedScene" uid="uid://1sdrflb7vqch" path="res://Logic_pice/wire_manager.tscn" id="6_vaf7x"]
-[ext_resource type="PackedScene" uid="uid://5dmbflgxfno1" path="res://Logic_pice/xor_gate.tscn" id="7_tmtfv"]
+[ext_resource type="PackedScene" path="res://Logic_pice/xor_gate.tscn" id="7_tmtfv"]
+[ext_resource type="Script" path="res://Load Game Menu/Save.gd" id="8_wj44j"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -27,10 +28,33 @@ text = "to the test inventory"
 script = ExtResource("1_cfpju")
 Button_path = "res://inventory.tscn"
 
+[node name="ButtonSave" type="Button" parent="."]
+offset_left = 961.0
+offset_top = 154.0
+offset_right = 1153.0
+offset_bottom = 230.0
+text = "Save"
+script = ExtResource("1_cfpju")
+
+[node name="ButtonLoad" type="Button" parent="."]
+offset_left = 962.0
+offset_top = 230.0
+offset_right = 1154.0
+offset_bottom = 306.0
+text = "Load Saved Data"
+script = ExtResource("1_cfpju")
+Button_path = "res://creative.tscn"
+
 [node name="WireManager" parent="." instance=ExtResource("6_vaf7x")]
 
 [node name="Toggle_Button" parent="." instance=ExtResource("3_054qb")]
 position = Vector2(22, 258)
+
+[node name="Toggle_ButtonSave" parent="." instance=ExtResource("3_054qb")]
+position = Vector2(26, 258)
+
+[node name="Toggle_ButtonLoad" parent="." instance=ExtResource("3_054qb")]
+position = Vector2(28, 258)
 
 [node name="Input_terminal" parent="." instance=ExtResource("5_up8p0")]
 position = Vector2(773, 302)
@@ -56,5 +80,10 @@ position = Vector2(504, 380)
 [node name="Xor_gate" parent="." instance=ExtResource("7_tmtfv")]
 position = Vector2(365, 180)
 
+[node name="Save" type="Node" parent="."]
+script = ExtResource("8_wj44j")
+
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
+[connection signal="pressed" from="ButtonSave" to="ButtonSave" method="_on_pressed"]
+[connection signal="pressed" from="ButtonLoad" to="ButtonLoad" method="_on_pressed"]

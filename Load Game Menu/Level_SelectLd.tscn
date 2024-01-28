@@ -1,0 +1,130 @@
+[gd_scene load_steps=16 format=3 uid="uid://beevex4nalk"]
+
+[ext_resource type="Script" path="res://New Game Menu/Level_Select.gd" id="1_keobg"]
+[ext_resource type="FontFile" uid="uid://b8cxcoj8owosp" path="res://Main Menu/ShareTechMono-Regular.ttf" id="2_xmop0"]
+[ext_resource type="FontFile" uid="uid://b8e827qhomm51" path="res://imigs/Galaksinos-RpOle.ttf" id="3_hgr0e"]
+
+[sub_resource type="Gradient" id="Gradient_hsytu"]
+offsets = PackedFloat32Array(0, 0.0519481, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.968806, 0.954545, 1, 1, 0.313726, 0, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4xg7p"]
+gradient = SubResource("Gradient_hsytu")
+fill_to = Vector2(1, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_oeqxk"]
+base_font = ExtResource("2_xmop0")
+
+[sub_resource type="FontVariation" id="FontVariation_umslh"]
+base_font = SubResource("FontVariation_oeqxk")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s4uu7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2glup"]
+bg_color = Color(0, 0, 1, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_belth"]
+base_font = SubResource("FontVariation_oeqxk")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_07ffj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3sffu"]
+bg_color = Color(0, 0, 1, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_ckagp"]
+base_font = SubResource("FontVariation_oeqxk")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0tvtc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_awlku"]
+bg_color = Color(0, 0, 1, 1)
+
+[node name="Level_Select" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_keobg")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_4xg7p")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 475.0
+offset_right = 213.0
+offset_bottom = 610.0
+
+[node name="Creative" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+focus_neighbor_top = NodePath("../Multiplayer")
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = SubResource("FontVariation_umslh")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s4uu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2glup")
+text = "CREATIVE"
+
+[node name="Story" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = SubResource("FontVariation_belth")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_07ffj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3sffu")
+text = "STORY
+"
+
+[node name="Multiplayer" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+focus_neighbor_bottom = NodePath("../Creative")
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = SubResource("FontVariation_ckagp")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0tvtc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_awlku")
+text = "MULTIPLAYER"
+
+[node name="Menu" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+focus_neighbor_bottom = NodePath("../Creative")
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = SubResource("FontVariation_ckagp")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0tvtc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_awlku")
+text = "MAIN MENU"
+
+[node name="select" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -324.5
+offset_top = -74.0
+offset_right = 324.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.996078, 0, 1, 1)
+theme_override_fonts/font = ExtResource("3_hgr0e")
+theme_override_font_sizes/font_size = 100
+text = "SELECT MODE"
+
+[connection signal="pressed" from="TextureRect/VBoxContainer/Creative" to="." method="_on_creative_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/Menu" to="." method="_on_menu_pressed"]
