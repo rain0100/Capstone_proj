@@ -92,7 +92,7 @@ offset_bottom = 134.0
 text = "LV8:A*(B+~C)+D
 "
 script = ExtResource("2_1nhlc")
-Button_path = "res://StoryMode/LVs/lv_1_wire.tscn"
+Button_path = "res://StoryMode/LVs/lv_8_logic_combo.tscn"
 metadata/_edit_use_anchors_ = true
 
 [node name="LV9_mux" type="Button" parent="."]
@@ -103,7 +103,7 @@ offset_bottom = 187.0
 text = "LV9:Mux
 "
 script = ExtResource("2_1nhlc")
-Button_path = "res://StoryMode/LVs/lv_1_wire.tscn"
+Button_path = "res://StoryMode/LVs/lv_9_mux.tscn"
 metadata/_edit_use_anchors_ = true
 
 [node name="LV10_Register" type="Button" parent="."]
@@ -114,7 +114,7 @@ offset_bottom = 233.0
 text = "LV10:Register
 "
 script = ExtResource("2_1nhlc")
-Button_path = "res://StoryMode/LVs/lv_1_wire.tscn"
+Button_path = "res://StoryMode/LVs/lv_10_register.tscn"
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="LV1_Wire" to="LV1_Wire" method="_on_pressed"]

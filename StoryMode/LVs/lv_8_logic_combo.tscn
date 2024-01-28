@@ -1,12 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://dr3t4sfyglvbh"]
+[gd_scene load_steps=8 format=3 uid="uid://dr3t4sfyglvbh"]
 
 [ext_resource type="PackedScene" uid="uid://cd0tjidll0v8k" path="res://Logic_pice/Toggle_Button.tscn" id="1_htfct"]
+[ext_resource type="Script" path="res://StoryMode/LVs/lv_8_logic_combo.gd" id="1_oyjgd"]
 [ext_resource type="PackedScene" uid="uid://df2rhqx7qpx0k" path="res://Logic_pice/or_gate.tscn" id="2_kd6iu"]
 [ext_resource type="PackedScene" uid="uid://c60yworhlyfvy" path="res://Logic_pice/and_gate.tscn" id="3_fsdkb"]
 [ext_resource type="PackedScene" uid="uid://cjf6rgr5b8rfi" path="res://Logic_pice/not_gate.tscn" id="4_60l3s"]
 [ext_resource type="PackedScene" uid="uid://crk8ewvm00l4o" path="res://Logic_pice/input_terminal.tscn" id="5_0mqqf"]
+[ext_resource type="PackedScene" uid="uid://4pavgxtipt33" path="res://Buttons/Back_to_StoryMode.tscn" id="7_2yw35"]
 
 [node name="lv_8_logic_combo" type="Node2D"]
+script = ExtResource("1_oyjgd")
 
 [node name="Toggle_Button" parent="." instance=ExtResource("1_htfct")]
 position = Vector2(169, 89)
@@ -34,3 +37,6 @@ position = Vector2(276, 166)
 
 [node name="Input_terminal" parent="." instance=ExtResource("5_0mqqf")]
 position = Vector2(731, 196)
+
+[node name="Back_to_StoryMode" parent="." instance=ExtResource("7_2yw35")]
+position = Vector2(1045, 25)
