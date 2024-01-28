@@ -23,3 +23,12 @@ position = Vector2(235, 319)
 
 [node name="Input_terminal" parent="." instance=ExtResource("4_6agos")]
 position = Vector2(836, 272)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 306.0
+offset_top = 26.0
+offset_right = 603.0
+offset_bottom = 135.0
+text = "Rools:
+-get all the configorations of the gate
+-there should be 2.pow(2) = 4 of them"
