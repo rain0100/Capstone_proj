@@ -10,7 +10,7 @@
 [node name="LV5_Nand_Nor" type="Node2D"]
 
 [node name="Nand_Gate" parent="." instance=ExtResource("1_x7234")]
-position = Vector2(324, 186)
+position = Vector2(631, 294)
 
 [node name="Toggle_Button" parent="." instance=ExtResource("2_uoqx3")]
 position = Vector2(103, 152)
@@ -19,13 +19,13 @@ position = Vector2(103, 152)
 position = Vector2(106, 223)
 
 [node name="Toggle_Button3" parent="." instance=ExtResource("2_uoqx3")]
-position = Vector2(311, 323)
+position = Vector2(128, 334)
 
 [node name="Or_Gate" parent="." instance=ExtResource("3_u7ue4")]
-position = Vector2(458, 296)
+position = Vector2(261, 180)
 
 [node name="Not_Gate" parent="." instance=ExtResource("4_vxamy")]
-position = Vector2(591, 296)
+position = Vector2(421, 171)
 
 [node name="Input_terminal" parent="." instance=ExtResource("5_unss0")]
 position = Vector2(883, 194)
