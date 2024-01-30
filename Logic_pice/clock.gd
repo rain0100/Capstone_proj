@@ -2,7 +2,7 @@ extends OutputTerminal
 
 class_name Clock
 
-var clock_freq : int = 30
+var clock_freq : int = 60
 var current_time: int = 0
 
 var clock_running : bool = false

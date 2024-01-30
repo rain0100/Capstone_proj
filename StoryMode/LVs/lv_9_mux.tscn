@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://bgmocw6p576et"]
+
+[ext_resource type="PackedScene" uid="uid://cd0tjidll0v8k" path="res://Logic_pice/Toggle_Button.tscn" id="1_0gpbb"]
+[ext_resource type="Script" path="res://StoryMode/LVs/lv_9_mux.gd" id="1_frfjk"]
+[ext_resource type="PackedScene" uid="uid://cjf6rgr5b8rfi" path="res://Logic_pice/not_gate.tscn" id="2_w8ppd"]
+[ext_resource type="PackedScene" uid="uid://c60yworhlyfvy" path="res://Logic_pice/and_gate.tscn" id="3_rivcx"]
+[ext_resource type="PackedScene" uid="uid://df2rhqx7qpx0k" path="res://Logic_pice/or_gate.tscn" id="4_smfiq"]
+[ext_resource type="PackedScene" uid="uid://crk8ewvm00l4o" path="res://Logic_pice/input_terminal.tscn" id="5_muern"]
+[ext_resource type="PackedScene" uid="uid://4pavgxtipt33" path="res://Buttons/Back_to_StoryMode.tscn" id="6_yy0xc"]
+
+[node name="lv_9_mux" type="Node2D"]
+script = ExtResource("1_frfjk")
+
+[node name="Toggle_Button" parent="." instance=ExtResource("1_0gpbb")]
+position = Vector2(113.813, 158.43)
+
+[node name="Toggle_Button2" parent="." instance=ExtResource("1_0gpbb")]
+position = Vector2(115, 316)
+
+[node name="Toggle_Button3" parent="." instance=ExtResource("1_0gpbb")]
+position = Vector2(118, 500)
+
+[node name="Not_Gate" parent="." instance=ExtResource("2_w8ppd")]
+position = Vector2(363, 275)
+
+[node name="And_Gate" parent="." instance=ExtResource("3_rivcx")]
+position = Vector2(581, 177)
+
+[node name="And_Gate2" parent="." instance=ExtResource("3_rivcx")]
+position = Vector2(585, 467)
+
+[node name="Or_Gate" parent="." instance=ExtResource("4_smfiq")]
+position = Vector2(767, 302)
+
+[node name="Input_terminal" parent="." instance=ExtResource("5_muern")]
+position = Vector2(978, 299)
+
+[node name="Back_to_StoryMode" parent="." instance=ExtResource("6_yy0xc")]
+position = Vector2(1056, 33)
