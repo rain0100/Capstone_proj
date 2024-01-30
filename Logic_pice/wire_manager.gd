@@ -32,7 +32,7 @@ func released(object : Node2D):
 	if(wireobj == null or is_drawing == false):
 		return 
 	is_drawing = false
-	if(object is InputTerminal):
+	if(object is InputTerminal and object.connected_wire == null):
 		wireobj.input_terminal = object
 		object.connected_wire = wireobj
 	else:
