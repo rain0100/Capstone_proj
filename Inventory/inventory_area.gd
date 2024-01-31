@@ -22,5 +22,19 @@ func storeItem(item):
 	if hovering_over_inventory:
 		for invSlot in inventorySlots.get_children():
 			if !invSlot.item:
-				invSlot.slotPut(item)
+				if hasNoConnections(item):
+					invSlot.slotPut(item)
 				break
+
+# this function checks if theres any wire connections to any gates or terminals that are going to be placed in inventory
+func hasNoConnections(item):
+	if item is Gate:
+		for item_inputs in item.inputs:
+			if item_inputs.connected_wire != null:
+				return false
+		return true
+	elif item is InputTerminal:
+		if item.connected_wire != null:
+			return false
+		else:
+			return true

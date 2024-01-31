@@ -27,7 +27,9 @@ func _input(event):
 						if hovering.get_parent().get_parent() is Gate:
 							begin_drag(hovering.get_parent().get_parent())
 						else:
-							begin_drag(hovering)
+							# prevents items in inventory from being dragged
+							if not(hovering.get_parent() is Slot):
+								begin_drag(hovering)
 						
 			#this is the start of relesing stuff
 			elif event.is_released():
