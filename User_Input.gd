@@ -36,14 +36,14 @@ func _input(event):
 					
 				elif(hovering is Terminal or hovering == null):
 					WireManager.released(hovering)
-		#this is to togal teh input buttons
+		#this is to togal the input buttons
 		if event.button_index == MOUSE_BUTTON_RIGHT:
 			if(hovering is ToggleButton and event.is_pressed()):
 				hovering.toggle()
 			elif(hovering is Clock and event.is_pressed()):
 				hovering.toggleClock()
 				
-func _process(delta):
+func _process(_delta):
 	if dragging != null:
 		drag()
 

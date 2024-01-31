@@ -34,7 +34,7 @@ Button_path = "res://inventory.tscn"
 position = Vector2(762, 358)
 
 [node name="Toggle_Button" parent="." instance=ExtResource("3_054qb")]
-position = Vector2(22, 258)
+position = Vector2(86, 258)
 
 [node name="Input_terminal" parent="." instance=ExtResource("5_up8p0")]
 position = Vector2(677, 299)
