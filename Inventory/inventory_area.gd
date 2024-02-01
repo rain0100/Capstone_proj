@@ -45,3 +45,10 @@ func hasNoConnections(item):
 			return false
 		else:
 			return true
+	elif item is OutputTerminal:
+		if item.connected_to != null:
+			return false
+		else:
+			return true
+	else:
+		return false
