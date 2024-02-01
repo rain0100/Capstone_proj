@@ -29,9 +29,16 @@ func storeItem(item):
 # this function checks if theres any wire connections to any gates or terminals that are going to be placed in inventory
 func hasNoConnections(item):
 	if item is Gate:
+		# check all item inputs for any wire connections
 		for item_inputs in item.inputs:
 			if item_inputs.connected_wire != null:
 				return false
+
+		# check all item outputs for any wire connections
+		for item_outputs in item.outputs:
+			if item_outputs.connected_to != null:
+				return false
+
 		return true
 	elif item is InputTerminal:
 		if item.connected_wire != null:

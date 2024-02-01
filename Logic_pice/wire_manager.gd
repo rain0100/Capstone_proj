@@ -35,12 +35,14 @@ func released(object : Node2D):
 	if(object is InputTerminal and object.connected_wire == null):
 		wireobj.input_terminal = object
 		object.connected_wire = wireobj
+		wireobj.output_terminal.connected_to = object # stores the input terminal the output is connected to in the output terminal class
 	else:
 		wireobj.queue_free()
 
 func delete(object:InputTerminal):
 	if(object == null or object.connected_wire == null):
 		return 
+	object.connected_wire.output_terminal.connected_to = null # output terminal of wire is no longer connected to anything
 	object.connected_wire.queue_free()
 	object.connected_wire = null
 	
