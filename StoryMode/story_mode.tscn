@@ -1,0 +1,129 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5l4ch7q7jr0v"]
+
+[ext_resource type="Script" path="res://StoryMode/LVs/Level_logic.gd" id="1_ylvpw"]
+[ext_resource type="Script" path="res://Buttons/Level_select.gd" id="2_1nhlc"]
+
+[node name="Story Mode" type="Node2D"]
+position = Vector2(41, 17)
+script = ExtResource("1_ylvpw")
+
+[node name="LV1_Wire" type="Button" parent="."]
+offset_left = 222.0
+offset_top = 1.0
+offset_right = 298.0
+offset_bottom = 35.0
+text = "LV1:Wire
+"
+script = ExtResource("2_1nhlc")
+Button_path = "res://StoryMode/LVs/lv_1_wire.tscn"
+metadata/_edit_use_anchors_ = true
+
+[node name="LV2_not" type="Button" parent="."]
+offset_left = 221.0
+offset_top = 52.0
+offset_right = 297.0
+offset_bottom = 86.0
+text = "LV2:Not
+"
+script = ExtResource("2_1nhlc")
+Button_path = "res://StoryMode/LVs/lv_2_not.tscn"
+metadata/_edit_use_anchors_ = true
+
+[node name="LV3_And" type="Button" parent="."]
+offset_left = 222.0
+offset_top = 97.0
+offset_right = 298.0
+offset_bottom = 131.0
+text = "LV3:And
+"
+script = ExtResource("2_1nhlc")
+Button_path = "res://StoryMode/LVs/lv_3_and.tscn"
+metadata/_edit_use_anchors_ = true
+
+[node name="LV4_Or" type="Button" parent="."]
+offset_left = 221.0
+offset_top = 151.0
+offset_right = 297.0
+offset_bottom = 185.0
+text = "LV4:Or
+"
+script = ExtResource("2_1nhlc")
+Button_path = "res://StoryMode/LVs/lv_4_or.tscn"
+metadata/_edit_use_anchors_ = true
+
+[node name="LV5_Nand_Nor" type="Button" parent="."]
+offset_left = 224.0
+offset_top = 200.0
+offset_right = 300.0
+offset_bottom = 234.0
+text = "LV5:Nand/Nor
+"
+script = ExtResource("2_1nhlc")
+Button_path = "res://StoryMode/LVs/lv_5_nand_nor.tscn"
+metadata/_edit_use_anchors_ = true
+
+[node name="LV6_XOr" type="Button" parent="."]
+offset_left = 424.0
+offset_top = 4.0
+offset_right = 500.0
+offset_bottom = 38.0
+text = "LV6:XOr
+"
+script = ExtResource("2_1nhlc")
+Button_path = "res://StoryMode/LVs/lv_6_xor.tscn"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button7" type="Button" parent="."]
+offset_left = 425.0
+offset_top = 55.0
+offset_right = 501.0
+offset_bottom = 89.0
+text = "LV7:NOr with Nand
+"
+script = ExtResource("2_1nhlc")
+Button_path = "res://StoryMode/LVs/lv_7_nor_with_n_and.tscn"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button8" type="Button" parent="."]
+offset_left = 425.0
+offset_top = 100.0
+offset_right = 501.0
+offset_bottom = 134.0
+text = "LV8:A*(B+~C)+D
+"
+script = ExtResource("2_1nhlc")
+Button_path = "res://StoryMode/LVs/lv_8_logic_combo.tscn"
+metadata/_edit_use_anchors_ = true
+
+[node name="LV9_mux" type="Button" parent="."]
+offset_left = 423.0
+offset_top = 153.0
+offset_right = 499.0
+offset_bottom = 187.0
+text = "LV9:Mux
+"
+script = ExtResource("2_1nhlc")
+Button_path = "res://StoryMode/LVs/lv_9_mux.tscn"
+metadata/_edit_use_anchors_ = true
+
+[node name="LV10_Register" type="Button" parent="."]
+offset_left = 426.0
+offset_top = 199.0
+offset_right = 502.0
+offset_bottom = 233.0
+text = "LV10:Register
+"
+script = ExtResource("2_1nhlc")
+Button_path = "res://StoryMode/LVs/lv_10_register.tscn"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="LV1_Wire" to="LV1_Wire" method="_on_pressed"]
+[connection signal="pressed" from="LV2_not" to="LV2_not" method="_on_pressed"]
+[connection signal="pressed" from="LV3_And" to="LV3_And" method="_on_pressed"]
+[connection signal="pressed" from="LV4_Or" to="LV4_Or" method="_on_pressed"]
+[connection signal="pressed" from="LV5_Nand_Nor" to="LV5_Nand_Nor" method="_on_pressed"]
+[connection signal="pressed" from="LV6_XOr" to="LV6_XOr" method="_on_pressed"]
+[connection signal="pressed" from="Button7" to="Button7" method="_on_pressed"]
+[connection signal="pressed" from="Button8" to="Button8" method="_on_pressed"]
+[connection signal="pressed" from="LV9_mux" to="LV9_mux" method="_on_pressed"]
+[connection signal="pressed" from="LV10_Register" to="LV10_Register" method="_on_pressed"]

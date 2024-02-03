@@ -1,8 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://cq7pwwtwjspik"]
+[gd_scene load_steps=15 format=3 uid="uid://cq7pwwtwjspik"]
 
 [ext_resource type="Script" path="res://Main Menu/Main_Menu.gd" id="1_tlpdj"]
 [ext_resource type="FontFile" uid="uid://b8cxcoj8owosp" path="res://Main Menu/ShareTechMono-Regular.ttf" id="2_knn8x"]
-[ext_resource type="FontVariation" uid="uid://cevhwbv7fxemm" path="res://Main Menu/new_font_variation.tres" id="3_p1xlu"]
 
 [sub_resource type="Gradient" id="Gradient_5dewx"]
 offsets = PackedFloat32Array(0, 0.0519481, 1)
@@ -112,7 +111,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 1, 1)
 theme_override_colors/font_shadow_color = Color(1, 0, 0.968627, 1)
 theme_override_colors/font_outline_color = Color(1, 0, 1, 1)
-theme_override_fonts/font = ExtResource("3_p1xlu")
+theme_override_fonts/font = ExtResource("2_knn8x")
 theme_override_font_sizes/font_size = 100
 text = "CIRCUIT CRAFT"
 
