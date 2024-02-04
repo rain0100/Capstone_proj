@@ -1,19 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dffddkkprwleo"]
+[gd_scene load_steps=3 format=3 uid="uid://dffddkkprwleo"]
 
 [ext_resource type="Script" path="res://StoryMode/LVs/Level_logic.gd" id="1_ylvpw"]
 [ext_resource type="Script" path="res://Buttons/Level_select.gd" id="2_1nhlc"]
-[ext_resource type="FontFile" uid="uid://b8cxcoj8owosp" path="res://Main Menu/ShareTechMono-Regular.tres" id="3_bsmp3"]
-
-[sub_resource type="FontVariation" id="FontVariation_oeqxk"]
-base_font = ExtResource("3_bsmp3")
-
-[sub_resource type="FontVariation" id="FontVariation_ro5wq"]
-base_font = SubResource("FontVariation_oeqxk")
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x8e7x"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e8jdc"]
-bg_color = Color(0, 0, 1, 1)
 
 [node name="Story Mode" type="Node2D"]
 position = Vector2(41, 17)
@@ -129,17 +117,6 @@ script = ExtResource("2_1nhlc")
 Button_path = "res://StoryMode/LVs/lv_10_register.tscn"
 metadata/_edit_use_anchors_ = true
 
-[node name="Save" type="Button" parent="."]
-scale = Vector2(0.998818, 0.964818)
-size_flags_horizontal = 0
-focus_neighbor_bottom = NodePath("../Creative")
-theme_override_colors/font_color = Color(0, 0, 1, 1)
-theme_override_fonts/font = SubResource("FontVariation_ro5wq")
-theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = SubResource("StyleBoxEmpty_x8e7x")
-theme_override_styles/hover = SubResource("StyleBoxFlat_e8jdc")
-text = "SAVE"
-
 [connection signal="pressed" from="LV1_Wire" to="LV1_Wire" method="_on_pressed"]
 [connection signal="pressed" from="LV2_not" to="LV2_not" method="_on_pressed"]
 [connection signal="pressed" from="LV3_And" to="LV3_And" method="_on_pressed"]
@@ -150,4 +127,3 @@ text = "SAVE"
 [connection signal="pressed" from="Button8" to="Button8" method="_on_pressed"]
 [connection signal="pressed" from="LV9_mux" to="LV9_mux" method="_on_pressed"]
 [connection signal="pressed" from="LV10_Register" to="LV10_Register" method="_on_pressed"]
-[connection signal="pressed" from="Save" to="." method="_on_save_pressed"]

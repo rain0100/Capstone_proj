@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://cq7pwwtwjspik"]
 
 [ext_resource type="Script" path="res://Main Menu/Main_Menu.gd" id="1_tlpdj"]
-[ext_resource type="FontFile" uid="uid://b8cxcoj8owosp" path="res://Main Menu/ShareTechMono-Regular.ttf" id="2_knn8x"]
+[ext_resource type="FontFile" uid="uid://b8cxcoj8owosp" path="res://Main Menu/ShareTechMono-Regular.tres" id="2_60mxc"]
 
 [sub_resource type="Gradient" id="Gradient_5dewx"]
 offsets = PackedFloat32Array(0, 0.0519481, 1)
@@ -12,7 +12,7 @@ gradient = SubResource("Gradient_5dewx")
 fill_to = Vector2(1, 1)
 
 [sub_resource type="FontVariation" id="FontVariation_oeqxk"]
-base_font = ExtResource("2_knn8x")
+base_font = ExtResource("2_60mxc")
 
 [sub_resource type="FontVariation" id="FontVariation_t74vi"]
 base_font = SubResource("FontVariation_oeqxk")
@@ -111,9 +111,10 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 1, 1)
 theme_override_colors/font_shadow_color = Color(1, 0, 0.968627, 1)
 theme_override_colors/font_outline_color = Color(1, 0, 1, 1)
-theme_override_fonts/font = ExtResource("2_knn8x")
+theme_override_fonts/font = ExtResource("2_60mxc")
 theme_override_font_sizes/font_size = 100
 text = "CIRCUIT CRAFT"
 
 [connection signal="pressed" from="TextureRect/VBoxContainer/New Game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/Load Game" to="." method="_on_load_game_pressed"]
 [connection signal="pressed" from="TextureRect/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
