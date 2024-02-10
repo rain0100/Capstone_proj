@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://cq7pwwtwjspik"]
+[gd_scene load_steps=17 format=3 uid="uid://cq7pwwtwjspik"]
 
 [ext_resource type="Script" path="res://Main Menu/Main_Menu.gd" id="1_tlpdj"]
 [ext_resource type="FontFile" uid="uid://b8cxcoj8owosp" path="res://Main Menu/ShareTechMono-Regular.tres" id="2_60mxc"]
+[ext_resource type="FontFile" uid="uid://cyuj8kloaskhy" path="res://imigs/SuperBrigade-2O8Ao.otf" id="3_q0830"]
 
 [sub_resource type="Gradient" id="Gradient_unbog"]
 offsets = PackedFloat32Array(0, 0.0519481, 1)
@@ -106,15 +107,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -338.5
-offset_top = -74.0
-offset_right = 338.5
+offset_left = -561.0
+offset_top = -90.5
+offset_right = 547.0
+offset_bottom = 16.5
 grow_horizontal = 2
 grow_vertical = 2
+rotation = -5.19722e-05
 theme_override_colors/font_color = Color(0, 0, 1, 1)
 theme_override_colors/font_shadow_color = Color(1, 0, 0.968627, 1)
 theme_override_colors/font_outline_color = Color(1, 0, 1, 1)
-theme_override_fonts/font = ExtResource("2_60mxc")
+theme_override_fonts/font = ExtResource("3_q0830")
 theme_override_font_sizes/font_size = 100
 text = "CIRCUIT CRAFT"
 

@@ -1,8 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://bb44wgk4du41a"]
+[gd_scene load_steps=16 format=3 uid="uid://bb44wgk4du41a"]
 
 [ext_resource type="FontFile" uid="uid://b8cxcoj8owosp" path="res://Main Menu/ShareTechMono-Regular.tres" id="1_3foco"]
 [ext_resource type="Script" path="res://New Game Menu/Level_Select.gd" id="1_dnqid"]
-
+[ext_resource type="FontFile" uid="uid://cyuj8kloaskhy" path="res://imigs/SuperBrigade-2O8Ao.otf" id="3_yn4lb"]
 
 [sub_resource type="Gradient" id="Gradient_hsytu"]
 offsets = PackedFloat32Array(0, 0.0519481, 1)
@@ -122,7 +122,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 1, 1)
 theme_override_colors/font_shadow_color = Color(0.996078, 0, 1, 1)
-theme_override_fonts/font = ExtResource("1_3foco")
+theme_override_fonts/font = ExtResource("3_yn4lb")
 theme_override_font_sizes/font_size = 100
 text = "SELECT MODE"
 

@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://ctwl2los5db6v"]
+[gd_scene load_steps=17 format=3 uid="uid://ctwl2los5db6v"]
 
 [ext_resource type="Script" path="res://Load Game Menu/Level_Select.gd" id="1_018vb"]
+[ext_resource type="FontFile" uid="uid://cyuj8kloaskhy" path="res://imigs/SuperBrigade-2O8Ao.otf" id="3_6h11i"]
 [ext_resource type="FontFile" uid="uid://b8cxcoj8owosp" path="res://Main Menu/ShareTechMono-Regular.tres" id="3_jsbjj"]
 
 [sub_resource type="Gradient" id="Gradient_hsytu"]
@@ -124,7 +125,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 1, 1)
 theme_override_colors/font_shadow_color = Color(0.996078, 0, 1, 1)
-theme_override_fonts/font = ExtResource("3_jsbjj")
+theme_override_fonts/font = ExtResource("3_6h11i")
 theme_override_font_sizes/font_size = 100
 text = "SELECT MODE"
 
