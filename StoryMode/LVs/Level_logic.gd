@@ -2,7 +2,7 @@ extends Node
 
 class_name GeneralLevel
 
-var save_path="C:/Users/mtoff/OneDrive/Desktop/Capstone_Proj/Matteo2/Capstone_proj/variable.save"
+var save_path="user://story.save"
 
 static var levels: Array[bool] = [false, false, false, false, false, false, false, false, false, false]
 #var level_manager = preload("res://StoryMode/Level_manager.gd")
@@ -10,19 +10,19 @@ static var levels: Array[bool] = [false, false, false, false, false, false, fals
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#unlock the next level if the ceret level is beeten
-	if(LevelSelect.load_flag==0):
-		for level_butten in get_children():
+	if(LevelSelect.story_load_flag==0):
+		for level_butten in $TextureRect/VBoxContainer.get_children():
 			if(level_butten.get_index() == 0 or level_butten.get_index() == 10):
 				continue
 			level_butten.disabled = !levels[level_butten.get_index() - 1]
 	else:
 		load_data()
-		for level_butten in get_children():
+		for level_butten in $TextureRect/VBoxContainer.get_children():
 			if(levels[level_butten.get_index()-1]==true or level_butten.get_index() == 0 or level_butten.get_index() == 10):
 				continue
 			else:
 				level_butten.disabled = !levels[level_butten.get_index() - 1]
-	LevelSelect.load_flag=0
+	LevelSelect.story_load_flag=0
 		
 func pass_level(LV_num):
 	print("Congrats! Level ", LV_num + 1, " Passed!")

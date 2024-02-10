@@ -1,29 +1,32 @@
-[gd_scene load_steps=15 format=3 uid="uid://cq7pwwtwjspik"]
+[gd_scene load_steps=16 format=3 uid="uid://cq7pwwtwjspik"]
 
 [ext_resource type="Script" path="res://Main Menu/Main_Menu.gd" id="1_tlpdj"]
 [ext_resource type="FontFile" uid="uid://b8cxcoj8owosp" path="res://Main Menu/ShareTechMono-Regular.tres" id="2_60mxc"]
 
-[sub_resource type="Gradient" id="Gradient_5dewx"]
+[sub_resource type="Gradient" id="Gradient_unbog"]
 offsets = PackedFloat32Array(0, 0.0519481, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0.968806, 0.954545, 1, 1, 0.313726, 0, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_asvp0"]
-gradient = SubResource("Gradient_5dewx")
+gradient = SubResource("Gradient_unbog")
 fill_to = Vector2(1, 1)
 
-[sub_resource type="FontVariation" id="FontVariation_oeqxk"]
+[sub_resource type="FontVariation" id="FontVariation_f1nf1"]
 base_font = ExtResource("2_60mxc")
 
 [sub_resource type="FontVariation" id="FontVariation_t74vi"]
-base_font = SubResource("FontVariation_oeqxk")
+base_font = SubResource("FontVariation_f1nf1")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_188ip"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nc4d2"]
 bg_color = Color(0, 0, 1, 1)
 
+[sub_resource type="FontVariation" id="FontVariation_1q25n"]
+base_font = ExtResource("2_60mxc")
+
 [sub_resource type="FontVariation" id="FontVariation_ee7gh"]
-base_font = SubResource("FontVariation_oeqxk")
+base_font = SubResource("FontVariation_1q25n")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4gli2"]
 
@@ -31,7 +34,7 @@ base_font = SubResource("FontVariation_oeqxk")
 bg_color = Color(0, 0, 1, 1)
 
 [sub_resource type="FontVariation" id="FontVariation_3cb7s"]
-base_font = SubResource("FontVariation_oeqxk")
+base_font = SubResource("FontVariation_f1nf1")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_glr6t"]
 

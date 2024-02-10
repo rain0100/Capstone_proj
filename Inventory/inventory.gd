@@ -2,6 +2,7 @@ extends Node2D
 
 class_name Inventory
 
+var save_path="user://creative.save"
 const slotClass = preload("res://Inventory/Slot.gd")
 @onready var inventorySlots = $GridContainer
 @onready var inventory_interface = $"."
@@ -9,6 +10,9 @@ signal toggle_inventory()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if(LevelSelect.creative_load_flag==1):
+		load_data()
+		
 	for invSlot in inventorySlots.get_children():
 		invSlot.gui_input.connect(slot_gui_input.bind(invSlot))
 		toggle_inventory.connect(toggle_inventory_interface)
@@ -32,3 +36,23 @@ func _unhandled_input(event:InputEvent)->void:
 
 func toggle_inventory_interface() ->void:
 		inventory_interface.visible=not inventory_interface.visible
+		
+		
+func save():
+	var file=FileAccess.open(save_path, FileAccess.WRITE)
+	file.store_var(inventorySlots)
+	file.store_var(inventory_interface)
+	print("SAVED")
+
+func load_data():
+	if FileAccess.file_exists(save_path):
+		var file=FileAccess.open(save_path, FileAccess.READ)
+		inventorySlots=file.get_var().instance_from_id()
+		inventory_interface=file.get_var().instance_from_id()
+		print("Data Loaded")
+
+	else:
+		print("No data")
+
+func _on_save_pressed():
+	save()

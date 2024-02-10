@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bme420ms646bh"]
+[gd_scene load_steps=13 format=3 uid="uid://bme420ms646bh"]
 
 [ext_resource type="Texture2D" uid="uid://c6n6oi4gbncrj" path="res://Inventory/white.png" id="1_2org7"]
 [ext_resource type="Script" path="res://Inventory/inventory.gd" id="1_vpd3a"]
 [ext_resource type="Texture2D" uid="uid://du8bgg7tt2xkv" path="res://Inventory/square.png" id="2_7dpat"]
 [ext_resource type="Script" path="res://Inventory/inventory_area.gd" id="3_eygax"]
 [ext_resource type="Script" path="res://Inventory/Slot.gd" id="5_g047j"]
+[ext_resource type="FontFile" uid="uid://b8cxcoj8owosp" path="res://Main Menu/ShareTechMono-Regular.tres" id="6_f1i5d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3qs4r"]
 size = Vector2(350.75, 260)
@@ -12,8 +13,18 @@ size = Vector2(350.75, 260)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eoplq"]
 texture = ExtResource("2_7dpat")
 
+[sub_resource type="FontVariation" id="FontVariation_3i44f"]
+base_font = ExtResource("6_f1i5d")
+
+[sub_resource type="FontVariation" id="FontVariation_oqkoh"]
+base_font = SubResource("FontVariation_3i44f")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m1m3r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qhear"]
+bg_color = Color(0, 0, 1, 1)
+
 [node name="Inventory" type="Node2D"]
-visible = false
 position = Vector2(-22, -17)
 scale = Vector2(1.0249, 1.00406)
 script = ExtResource("1_vpd3a")
@@ -116,3 +127,16 @@ custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_eoplq")
 script = ExtResource("5_g047j")
+
+[node name="SAVE" type="Button" parent="."]
+scale = Vector2(0.712283, 0.545511)
+size_flags_horizontal = 0
+focus_neighbor_bottom = NodePath("../Creative")
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = SubResource("FontVariation_oqkoh")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_m1m3r")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qhear")
+text = "SAVE"
+
+[connection signal="pressed" from="SAVE" to="." method="_on_save_pressed"]

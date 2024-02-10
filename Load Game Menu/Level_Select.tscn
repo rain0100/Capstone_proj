@@ -30,11 +30,11 @@ base_font = SubResource("FontVariation_oeqxk")
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hsvp8"]
 bg_color = Color(0, 0, 1, 1)
 
-[sub_resource type="FontVariation" id="FontVariation_6r5f8"]
+[sub_resource type="FontVariation" id="FontVariation_ot8oe"]
 base_font = ExtResource("3_jsbjj")
 
 [sub_resource type="FontVariation" id="FontVariation_6g4hd"]
-base_font = SubResource("FontVariation_6r5f8")
+base_font = SubResource("FontVariation_ot8oe")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qfylh"]
 
