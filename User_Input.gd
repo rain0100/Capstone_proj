@@ -13,9 +13,11 @@ func _input(event):
 				if(hovering is Terminal and Input.is_key_pressed(KEY_SHIFT)):
 					if(hovering is InputTerminal):
 						WireManager.delete(hovering)
+
 					#this is for draging the wire
 					WireManager.pressed(hovering)
-				#this is for draging the wire
+				####################################################
+				#this is for draging the wire after we start draging
 				else:
 					if hovering is Gate:
 						# prevents items in inventory from being dragged
