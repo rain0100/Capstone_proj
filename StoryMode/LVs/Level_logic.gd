@@ -12,7 +12,7 @@ func _ready():
 	#unlock the next level if the ceret level is beeten
 	if(LevelSelect.story_load_flag==0):
 		for level_butten in $TextureRect/VBoxContainer.get_children():
-			if(level_butten.get_index() == 0 or level_butten.get_index() == 10):
+			if(level_butten.get_index() == 0 or level_butten.get_index() == 10 or level_butten.get_index()==9):
 				continue
 			level_butten.disabled = !levels[level_butten.get_index() - 1]
 	else:
@@ -20,8 +20,7 @@ func _ready():
 		for level_butten in $TextureRect/VBoxContainer.get_children():
 			if(levels[level_butten.get_index()-1]==true or level_butten.get_index() == 0 or level_butten.get_index() == 10):
 				continue
-			else:
-				level_butten.disabled = !levels[level_butten.get_index() - 1]
+			level_butten.disabled = !levels[level_butten.get_index() - 1]
 	LevelSelect.story_load_flag=0
 		
 func pass_level(LV_num):
@@ -41,7 +40,7 @@ func load_data():
 		var file=FileAccess.open(save_path, FileAccess.READ)
 		var loaded_levels=file.get_var()
 		print(loaded_levels)
-		for level_butten in get_children():
+		for level_butten in $TextureRect/VBoxContainer.get_children():
 			levels[level_butten.get_index()-1]=loaded_levels[level_butten.get_index()-1]
 		print("Data Loaded")
 

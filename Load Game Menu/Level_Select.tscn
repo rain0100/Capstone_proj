@@ -42,7 +42,7 @@ base_font = SubResource("FontVariation_ot8oe")
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_51gi2"]
 bg_color = Color(0, 0, 1, 1)
 
-[node name="Level_Select2" type="Control"]
+[node name="Level_Select" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
