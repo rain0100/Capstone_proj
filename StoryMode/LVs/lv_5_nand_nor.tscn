@@ -42,4 +42,6 @@ offset_bottom = 205.0
 text = "Rools:
 -to beat this lv make all the outputs Flase
 -Togle butens can only conect to 1 thing
--use all gates"
+-use all gates
+-1 output of each gate bust be 
+conected to one input the check criterea of beet lv"
