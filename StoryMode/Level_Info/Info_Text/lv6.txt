@@ -1,0 +1,1 @@
+XOR gates take 2 inputs. If ONLY one of the inputs has a value of 1, the XOR gate will output 1. Otherwise, the output will be 0.

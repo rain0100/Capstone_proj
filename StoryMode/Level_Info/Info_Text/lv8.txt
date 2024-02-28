@@ -1,0 +1,6 @@
+Boolean expressions are an effective way to desribe the behaviour of a circuit.
+
+Symbols:
+* = AND (e.g. x * y = x AND y)
++ = OR (e.g x + y = x OR y)
+' = NOT (e.g. x' = NOT x)

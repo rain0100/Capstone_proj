@@ -1,0 +1,7 @@
+Terminals can only have 1 of 2 values, logic HIGH (or 1) and logic LOW (or 0). Output terminals produce a value to be sent somewhere else. Input terminals receive a value.
+
+Wires are used to connect 2 terminals and send values between them.
+
+For example, if an output terminal currently has a value of 1 and is connected to an input terminal with a wire, the input terminal will receive the same value of 1. 
+
+An output terminal can be connected to multiple wires however an input terminal can only have 1 wire connected to it.

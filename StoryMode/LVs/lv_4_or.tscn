@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://d1ox6obbel25t"]
+[gd_scene load_steps=7 format=3 uid="uid://d1ox6obbel25t"]
 
 [ext_resource type="Script" path="res://StoryMode/LVs/lv_4_or.gd" id="1_oa2mq"]
 [ext_resource type="PackedScene" uid="uid://cd0tjidll0v8k" path="res://Logic_pice/Toggle_Button.tscn" id="1_qybwf"]
 [ext_resource type="PackedScene" uid="uid://df2rhqx7qpx0k" path="res://Logic_pice/or_gate.tscn" id="2_wyw8w"]
 [ext_resource type="PackedScene" uid="uid://crk8ewvm00l4o" path="res://Logic_pice/input_terminal.tscn" id="3_hh14k"]
 [ext_resource type="PackedScene" uid="uid://4pavgxtipt33" path="res://Buttons/Back_to_StoryMode.tscn" id="4_51ldy"]
+[ext_resource type="PackedScene" uid="uid://bg57gvfu37fr3" path="res://StoryMode/Level_Info/info_button.tscn" id="6_s6ets"]
 
 [node name="LV4_Or" type="Node2D"]
 script = ExtResource("1_oa2mq")
@@ -23,3 +24,5 @@ position = Vector2(530, 244)
 
 [node name="Input_terminal" parent="." instance=ExtResource("3_hh14k")]
 position = Vector2(707, 245)
+
+[node name="info_button" parent="." instance=ExtResource("6_s6ets")]
