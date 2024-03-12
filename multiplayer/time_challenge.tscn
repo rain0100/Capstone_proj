@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cyqg0deu0sdkg"]
+
+[node name="time_challenge" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 328.0
+offset_top = 151.0
+offset_right = 730.0
+offset_bottom = 282.0
+text = "TIME CHALLENGE !!!"
