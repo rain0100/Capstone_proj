@@ -39,7 +39,7 @@ base_font = SubResource("FontVariation_oeqxk")
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_awlku"]
 bg_color = Color(0, 0, 1, 1)
 
-[node name="Level_Select" type="Control"]
+[node name="Level_Select2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -128,4 +128,5 @@ text = "SELECT MODE"
 
 [connection signal="pressed" from="TextureRect/VBoxContainer/Creative" to="." method="_on_creative_pressed"]
 [connection signal="pressed" from="TextureRect/VBoxContainer/Story" to="." method="_on_story_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/Multiplayer" to="." method="_on_multiplayer_pressed"]
 [connection signal="pressed" from="TextureRect/VBoxContainer/Menu" to="." method="_on_menu_pressed"]
