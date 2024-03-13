@@ -1,0 +1,5 @@
+Registers, or flip-flops, are circuits that are used to store information. 
+
+They take in 2 inputs, one data value and a clock signal. A clock signal is a signal whos value switches between 0 and 1 periodically.
+
+The value stored in a register is updated every clock cycle. In other words, a register's value will stay the same until the beginning of the next clock cycle.

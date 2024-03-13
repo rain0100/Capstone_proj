@@ -1,0 +1,1 @@
+AND gates take 2 inputs. If both inputs have a value of 1, the AND gate will output 1. Otherwise, the output will be 0.

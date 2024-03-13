@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ltyx30vse8rp"]
+[gd_scene load_steps=8 format=3 uid="uid://ltyx30vse8rp"]
 
 [ext_resource type="Script" path="res://StoryMode/LVs/lv_5_nand_nor.gd" id="1_ce2x2"]
 [ext_resource type="PackedScene" uid="uid://dntj6a7yxmak5" path="res://Logic_pice/nand_gate.tscn" id="1_x7234"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://3anyt0st1dy4" path="res://Logic_pice/nor_gate.tscn" id="5_hwysy"]
 [ext_resource type="PackedScene" uid="uid://crk8ewvm00l4o" path="res://Logic_pice/input_terminal.tscn" id="5_unss0"]
 [ext_resource type="PackedScene" uid="uid://4pavgxtipt33" path="res://Buttons/Back_to_StoryMode.tscn" id="6_150ho"]
+[ext_resource type="PackedScene" uid="uid://bg57gvfu37fr3" path="res://StoryMode/Level_Info/info_button.tscn" id="7_3n0px"]
 
 [node name="LV5_Nand_Nor" type="Node2D"]
 script = ExtResource("1_ce2x2")
@@ -45,3 +46,5 @@ text = "Rools:
 -use all gates
 -1 output of each gate bust be 
 conected to one input the check criterea of beet lv"
+
+[node name="info_button" parent="." instance=ExtResource("7_3n0px")]
