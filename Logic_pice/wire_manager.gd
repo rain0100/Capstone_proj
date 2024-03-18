@@ -5,6 +5,8 @@ var scene = preload("res://Logic_pice/wire.tscn")
 var wireobj : Wire
 var is_drawing : bool = false
 
+@export var drawing= is_drawing
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass

@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cv53tq8xhgfc7"]
+[gd_scene load_steps=6 format=3 uid="uid://cv53tq8xhgfc7"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_8130s"]
 [ext_resource type="PackedScene" uid="uid://c60yworhlyfvy" path="res://Logic_pice/and_gate.tscn" id="3_7iw6l"]
-[ext_resource type="PackedScene" uid="uid://rtlmhsbw0pr5" path="res://Logic_pice/wire.tscn" id="5_uskxt"]
 [ext_resource type="PackedScene" uid="uid://1sdrflb7vqch" path="res://Logic_pice/wire_manager.tscn" id="6_xbmwa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oulfg"]
@@ -13,18 +12,6 @@ properties/0/path = NodePath(".:position")
 properties/0/spawn = true
 properties/0/sync = true
 properties/0/watch = false
-properties/1/path = NodePath("And_Gate:position")
-properties/1/spawn = true
-properties/1/sync = true
-properties/1/watch = false
-properties/2/path = NodePath("Wire:position")
-properties/2/spawn = true
-properties/2/sync = true
-properties/2/watch = false
-properties/3/path = NodePath("WireManager:position")
-properties/3/spawn = true
-properties/3/sync = true
-properties/3/watch = false
 
 [node name="player" type="CharacterBody2D"]
 position = Vector2(526, 248)
@@ -39,9 +26,8 @@ debug_color = Color(0, 0, 0, 0.419608)
 
 [node name="And_Gate" parent="." instance=ExtResource("3_7iw6l")]
 
-[node name="Wire" parent="." instance=ExtResource("5_uskxt")]
-
 [node name="WireManager" parent="." instance=ExtResource("6_xbmwa")]
+drawing = true
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_7dcac")
