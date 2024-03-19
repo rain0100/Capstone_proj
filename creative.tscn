@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cd0tjidll0v8k" path="res://Logic_pice/Toggle_Button.tscn" id="3_054qb"]
 [ext_resource type="PackedScene" uid="uid://crk8ewvm00l4o" path="res://Logic_pice/input_terminal.tscn" id="5_up8p0"]
 [ext_resource type="PackedScene" uid="uid://dntj6a7yxmak5" path="res://Logic_pice/nand_gate.tscn" id="6_e4303"]
-[ext_resource type="PackedScene" uid="uid://bme420ms646bh" path="res://Inventory/inventory.tscn" id="6_k8xqi"]
+[ext_resource type="PackedScene" uid="uid://bme420ms646bh" path="res://Inventory/Inventory.tscn" id="6_k8xqi"]
 [ext_resource type="PackedScene" uid="uid://cjf6rgr5b8rfi" path="res://Logic_pice/not_gate.tscn" id="6_ud448"]
 [ext_resource type="PackedScene" uid="uid://1sdrflb7vqch" path="res://Logic_pice/wire_manager.tscn" id="6_vaf7x"]
 [ext_resource type="Script" path="res://LOAD SAVED INV.gd" id="9_w22hb"]
@@ -58,14 +58,23 @@ position = Vector2(504, 380)
 [node name="clock" parent="." instance=ExtResource("11_kp1q6")]
 position = Vector2(44.2506, 381.618)
 
-[node name="LOAD SAVED INV" type="Button" parent="."]
+[node name="Load" type="Button" parent="."]
 offset_left = 964.0
 offset_top = 155.0
 offset_right = 1153.0
-offset_bottom = 226.0
-text = "LOAD SAVED INV"
+offset_bottom = 202.0
+text = "Load"
+script = ExtResource("9_w22hb")
+
+[node name="Save" type="Button" parent="."]
+offset_left = 966.0
+offset_top = 200.0
+offset_right = 1155.0
+offset_bottom = 247.0
+text = "Save"
 script = ExtResource("9_w22hb")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
-[connection signal="pressed" from="LOAD SAVED INV" to="LOAD SAVED INV" method="_on_pressed"]
+[connection signal="pressed" from="Load" to="Load" method="_on_pressed"]
+[connection signal="pressed" from="Save" to="Save" method="_save_inventory_pressed"]
