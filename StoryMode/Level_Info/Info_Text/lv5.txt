@@ -1,0 +1,5 @@
+NAND gates work similarly to AND gates and NOR gates work similarly to OR gates, however they produce the opposite output.
+
+For example, if both inputs are 1, an AND gate will output a 1 however a NAND gate will output a 0. If either input is a 1, an OR gate will output a 1 however a NOR gate will output a 0.
+
+An easy way to think about this is to recognize that a NAND gate is the same as connecting an AND gate's output to the input of a NOT gate. Similarly, a NOR gate is the same as connecting an OR gate's output to the input of a NOT gate.

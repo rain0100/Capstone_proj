@@ -127,4 +127,5 @@ text = "SELECT MODE"
 
 [connection signal="pressed" from="TextureRect/VBoxContainer/Creative" to="." method="_on_creative_pressed"]
 [connection signal="pressed" from="TextureRect/VBoxContainer/Story" to="." method="_on_story_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/Multiplayer" to="." method="_on_multiplayer_pressed"]
 [connection signal="pressed" from="TextureRect/VBoxContainer/Menu" to="." method="_on_menu_pressed"]

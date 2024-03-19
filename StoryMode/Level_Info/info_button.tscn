@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=3 uid="uid://bg57gvfu37fr3"]
+
+[ext_resource type="Script" path="res://StoryMode/Level_Info/info_button.gd" id="1_urj0j"]
+[ext_resource type="FontFile" uid="uid://b8cxcoj8owosp" path="res://Main Menu/ShareTechMono-Regular.ttf" id="2_o33lv"]
+[ext_resource type="Script" path="res://StoryMode/Level_Info/Info_Title.gd" id="3_fp01v"]
+[ext_resource type="Script" path="res://StoryMode/Level_Info/Info.gd" id="4_5ejwu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sbckq"]
+bg_color = Color(0.321569, 0.713726, 0.647059, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+
+[node name="info_button" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1008.0
+offset_top = 506.0
+offset_right = 1148.0
+offset_bottom = 643.0
+text = "Click for more
+info"
+script = ExtResource("1_urj0j")
+
+[node name="MarginContainer" type="MarginContainer" parent="Button"]
+visible = false
+layout_mode = 0
+offset_left = -808.0
+offset_top = -456.0
+offset_right = -158.0
+offset_bottom = 94.0
+
+[node name="Panel" type="Panel" parent="Button/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sbckq")
+
+[node name="Title" type="Label" parent="Button/MarginContainer/Panel"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 24.0
+offset_right = 605.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_o33lv")
+theme_override_font_sizes/font_size = 40
+text = "TITLE"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_fp01v")
+
+[node name="Info" type="Label" parent="Button/MarginContainer/Panel"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 120.0
+offset_right = 612.0
+offset_bottom = 510.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_o33lv")
+theme_override_font_sizes/font_size = 20
+text = "Dummy Text"
+autowrap_mode = 2
+script = ExtResource("4_5ejwu")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

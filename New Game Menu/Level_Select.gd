@@ -22,3 +22,8 @@ func _on_menu_pressed():
 
 func _on_story_pressed():
 		get_tree().change_scene_to_file("res://StoryMode/story_mode.tscn")
+
+
+func _on_multiplayer_pressed():
+	pass
+#	get_tree().change_scene_to_file("res://multiplayer/mp_mode_select.tscn")

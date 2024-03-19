@@ -1,0 +1,1 @@
+OR gates take 2 inputs. If either input has a value of 1, the OR gate will output 1. Otherwise, the output will be 0.
