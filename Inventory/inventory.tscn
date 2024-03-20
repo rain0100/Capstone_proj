@@ -12,7 +12,7 @@ size = Vector2(350.75, 260)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eoplq"]
 texture = ExtResource("2_7dpat")
 
-[node name="Inventory" type="Node2D"]
+[node name="Inventory2" type="Node2D"]
 visible = false
 position = Vector2(-22, -17)
 scale = Vector2(1.0249, 1.00406)

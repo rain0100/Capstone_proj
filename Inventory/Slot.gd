@@ -4,6 +4,7 @@ class_name Slot
 
 var ItemClass = preload("res://Logic_pice/and_gate.tscn")
 var item = null
+var savedItem: Array = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,11 +15,13 @@ func _ready():
 	
 # place item into a slot
 func slotPut(new_item):
+	print(new_item)
 	item = new_item
 	item.position = Vector2(37.5,37.5)
 	var parentNode = find_parent("Node2D")
 	parentNode.remove_child(item)
 	add_child(item)
+	savedItem.append(item)
 	
 # creates a duplicate of the selected item and puts it in the play area node
 func duplicateItem():
