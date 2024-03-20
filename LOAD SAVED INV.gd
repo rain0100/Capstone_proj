@@ -38,10 +38,19 @@ func _on_pressed():
 			if line != "":
 				var gate_name = line.split("_")[0].to_lower()
 				gate_names.append(gate_name)
+			
 
 	#put them in their respective slots
-	for gate in gate_names: 
-		var path = "res://Logic_pice/" + gate + "_gate.tscn"
+	for gate in gate_names:
+		var path
+		if gate == "toggle":
+			path =  "res://Logic_pice/Toggle_Button.tscn"
+		elif gate == "input":
+			path =  "res://Logic_pice/input_terminal.tscn"
+		elif gate == "output":
+			path =  "res://Logic_pice/output_terminal.tscn"
+		else:
+			path = "res://Logic_pice/" + gate + "_gate.tscn"
 		var ItemClass = load(path)   
 		var item = ItemClass.instantiate()
 		var slot_found = false
