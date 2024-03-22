@@ -1,5 +1,5 @@
-[Toggle_Button:<Node2D#37765514596>]
-[]
+[Nand_Gate3:<Node2D#33369883964>]
+[Not_Gate:<Node2D#32531023114>]
 []
 []
 []

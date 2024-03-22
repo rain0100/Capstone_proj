@@ -15,7 +15,6 @@ func _on_creative_pressed():
 	get_tree().change_scene_to_file("res://creative.tscn")
 	
 
-
 func _on_menu_pressed():
 	get_tree().change_scene_to_file("res://Main Menu/Main_Menu.tscn")
 
