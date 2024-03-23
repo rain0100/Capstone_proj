@@ -6,6 +6,7 @@ func _ready():
 	pass
 
 func _on_new_game_pressed():
+	print("is testing working?")
 	get_tree().change_scene_to_file("res://New Game Menu/Level_Select.tscn")
 
 func _on_quit_pressed():

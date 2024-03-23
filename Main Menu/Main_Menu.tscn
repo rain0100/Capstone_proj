@@ -11,11 +11,11 @@ colors = PackedColorArray(1, 1, 1, 1, 0.968806, 0.954545, 1, 1, 0.313726, 0, 1, 
 gradient = SubResource("Gradient_5dewx")
 fill_to = Vector2(1, 1)
 
-[sub_resource type="FontVariation" id="FontVariation_71u0x"]
+[sub_resource type="FontVariation" id="FontVariation_xfuc1"]
 base_font = ExtResource("2_knn8x")
 
 [sub_resource type="FontVariation" id="FontVariation_t74vi"]
-base_font = SubResource("FontVariation_71u0x")
+base_font = SubResource("FontVariation_xfuc1")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_188ip"]
 

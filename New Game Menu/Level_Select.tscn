@@ -3,19 +3,19 @@
 [ext_resource type="FontFile" uid="uid://b8cxcoj8owosp" path="res://Main Menu/ShareTechMono-Regular.ttf" id="1_3foco"]
 [ext_resource type="Script" path="res://New Game Menu/Level_Select.gd" id="1_dnqid"]
 
-[sub_resource type="Gradient" id="Gradient_dsqjp"]
+[sub_resource type="Gradient" id="Gradient_777ke"]
 offsets = PackedFloat32Array(0, 0.0519481, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0.968806, 0.954545, 1, 1, 0.313726, 0, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_4xg7p"]
-gradient = SubResource("Gradient_dsqjp")
+gradient = SubResource("Gradient_777ke")
 fill_to = Vector2(1, 1)
 
-[sub_resource type="FontVariation" id="FontVariation_sia87"]
+[sub_resource type="FontVariation" id="FontVariation_nknt8"]
 base_font = ExtResource("1_3foco")
 
 [sub_resource type="FontVariation" id="FontVariation_umslh"]
-base_font = SubResource("FontVariation_sia87")
+base_font = SubResource("FontVariation_nknt8")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s4uu7"]
 
@@ -23,7 +23,7 @@ base_font = SubResource("FontVariation_sia87")
 bg_color = Color(0, 0, 1, 1)
 
 [sub_resource type="FontVariation" id="FontVariation_belth"]
-base_font = SubResource("FontVariation_sia87")
+base_font = SubResource("FontVariation_nknt8")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_07ffj"]
 
@@ -31,7 +31,7 @@ base_font = SubResource("FontVariation_sia87")
 bg_color = Color(0, 0, 1, 1)
 
 [sub_resource type="FontVariation" id="FontVariation_ckagp"]
-base_font = SubResource("FontVariation_sia87")
+base_font = SubResource("FontVariation_nknt8")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0tvtc"]
 
