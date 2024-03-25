@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 UserInput="*res://User_Input.gd"
 WireManager="*res://Logic_pice/wire_manager.gd"
+LevelSelect="*res://Load Game Menu/Level_Select.gd"
 
 [dotnet]
 

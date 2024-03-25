@@ -174,6 +174,24 @@ script = ExtResource("2_1nhlc")
 Button_path = "res://StoryMode/LVs/lv_10_register.tscn"
 metadata/_edit_use_anchors_ = true
 
+[node name="SAVE" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0.85098)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hmu4q")
+text = "SAVE"
+script = ExtResource("2_1nhlc")
+Button_path = "res://StoryMode/LVs/lv_10_register.tscn"
+metadata/_edit_use_anchors_ = true
+
+[node name="MODES" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0.85098)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hmu4q")
+text = "TO MODES"
+script = ExtResource("2_1nhlc")
+Button_path = "res://StoryMode/LVs/lv_10_register.tscn"
+metadata/_edit_use_anchors_ = true
+
 [node name="select" type="Label" parent="TextureRect"]
 layout_mode = 1
 anchors_preset = -1
@@ -203,3 +221,5 @@ text = "SELECT LEVEL"
 [connection signal="pressed" from="TextureRect/VBoxContainer/Button8" to="TextureRect/VBoxContainer/Button8" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/VBoxContainer/LV9_mux" to="TextureRect/VBoxContainer/LV9_mux" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/VBoxContainer/LV10_Register" to="TextureRect/VBoxContainer/LV10_Register" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/SAVE" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/MODES" to="." method="_on_modes_pressed"]

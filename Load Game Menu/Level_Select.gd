@@ -1,6 +1,9 @@
 extends Control
 
 
+static var story_load_flag=0;
+static var creative_load_flag=0;
+static var mult_load_flag=0;
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -12,6 +15,7 @@ func _process(delta):
 
 
 func _on_creative_pressed():
+	creative_load_flag=1;
 	get_tree().change_scene_to_file("res://creative.tscn")
 	
 
@@ -20,9 +24,10 @@ func _on_menu_pressed():
 
 
 func _on_story_pressed():
-		get_tree().change_scene_to_file("res://StoryMode/story_mode.tscn")
-
-
+	story_load_flag=1;
+	get_tree().change_scene_to_file("res://StoryMode/story_mode.tscn")
+	
+		
 func _on_multiplayer_pressed():
-	pass
+	mult_load_flag=1
 	get_tree().change_scene_to_file("res://multiplayer/multiplayer.tscn")
