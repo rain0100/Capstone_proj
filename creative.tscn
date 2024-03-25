@@ -76,5 +76,5 @@ script = ExtResource("9_w22hb")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
-[connection signal="pressed" from="Load" to="Load" method="_on_pressed"]
+[connection signal="pressed" from="Load" to="Load" method="_load_inventory_pressed"]
 [connection signal="pressed" from="Save" to="Save" method="_save_inventory_pressed"]

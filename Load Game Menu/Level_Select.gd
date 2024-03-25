@@ -1,6 +1,8 @@
-extends Button
+extends Control
 var save_path = "C:/Godot/Capstone_proj/saved_files/slot_data.txt" 
-@onready var inventory = $"../Inventory"
+var item = null
+# @onready var inventory = $"../../../Inventory"
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -10,26 +12,12 @@ func _ready():
 func _process(delta):
 	pass
 
-func _save_inventory_pressed(): 
-	var inventory_node = get_node("/root/Node2D/Inventory/GridContainer")
-	var file = FileAccess.open(save_path, FileAccess.WRITE)
-	#var gate = ""
-	for i in range(2, 10): 
-		var slot = inventory_node.get_node("Slot"+str(i))
-		if slot:
-			var savedItems = str(slot.savedItem)
-			print("saved: ", savedItems)
-			file.store_string(savedItems + "\n")
-	file.close()
 
-func _load_inventory_pressed():
-	# print(inventory)
+func _on_creative_pressed():
+	get_tree().change_scene_to_file("res://creative.tscn")
+	var inventory = load("res://Inventory/Inventory.tscn").instantiate()	
 	var gridCont = inventory.get_child(2)
-	print(gridCont)
-	#clear inventory
-	for slot in gridCont.get_children():
-		if (slot.item != null):
-			slot.deleteItem()
+	# print(gridCont)
 
 	#extract saved gates 
 	var gate_names = []
@@ -59,13 +47,23 @@ func _load_inventory_pressed():
 		for slot in gridCont.get_children(): 
 			if slot.item == null:
 				slot.item = item
-				print(slot.item)
-				slot.slotPut(slot.item)
+				slot.slotPutLoad(slot.item)
 				slot_found = true
 				break
 		if not slot_found:
 			print("No empty slots for", gate)
+	get_tree().change_scene_to_file("res://creative.tscn")
 
 
 
+func _on_menu_pressed():
+	get_tree().change_scene_to_file("res://Main Menu/Main_Menu.tscn")
 
+
+func _on_story_pressed():
+		get_tree().change_scene_to_file("res://StoryMode/story_mode.tscn")
+
+
+func _on_multiplayer_pressed():
+	pass
+#	get_tree().change_scene_to_file("res://multiplayer/mp_mode_select.tscn")
