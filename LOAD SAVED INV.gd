@@ -21,6 +21,7 @@ func _save_inventory_pressed():
 		if slot:
 			var savedItems = str(slot.savedItem)
 			file.store_string(savedItems + "\n")
+	print("saved")
 	file.close()
 
 func _load_inventory_pressed():

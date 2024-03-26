@@ -1,20 +1,20 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1711417432
-creative.tscn::PackedScene::7012328779866298183::1711417038::0::1::::<><>::res://Buttons/crea_to_title.gd<>uid://cd0tjidll0v8k::::res://Logic_pice/Toggle_Button.tscn<>uid://crk8ewvm00l4o::::res://Logic_pice/input_terminal.tscn<>uid://dntj6a7yxmak5::::res://Logic_pice/nand_gate.tscn<>uid://bme420ms646bh::::res://Inventory/inventory.tscn<>uid://cjf6rgr5b8rfi::::res://Logic_pice/not_gate.tscn<>uid://1sdrflb7vqch::::res://Logic_pice/wire_manager.tscn<>res://LOAD SAVED INV.gd<>uid://cvdccuv5hqqnh::::res://Logic_pice/clock.tscn
+::res://::1711471087
+creative.tscn::PackedScene::7012328779866298183::1711470239::0::1::::<><>::res://Buttons/crea_to_title.gd<>uid://cd0tjidll0v8k::::res://Logic_pice/Toggle_Button.tscn<>uid://crk8ewvm00l4o::::res://Logic_pice/input_terminal.tscn<>uid://dntj6a7yxmak5::::res://Logic_pice/nand_gate.tscn<>uid://bme420ms646bh::::res://Inventory/Inventory.tscn<>uid://cjf6rgr5b8rfi::::res://Logic_pice/not_gate.tscn<>uid://1sdrflb7vqch::::res://Logic_pice/wire_manager.tscn<>res://LOAD SAVED INV.gd<>uid://cvdccuv5hqqnh::::res://Logic_pice/clock.tscn
 icon.svg::CompressedTexture2D::2914989006448764758::1705096712::1710874249::1::::<><>::
 inventory.tscn::PackedScene::4007627184860357476::1711309347::0::1::::<><>::uid://djevgl4v8i5r6::::res://imigs/imig_holder.jpg<>uid://d1t4ixrftrsou::::res://imigs/contaner.png<>uid://bmy4sxa0dq5kb::::res://imigs/and_gate.png
-LOAD SAVED INV.gd::GDScript::-1::1711417038::0::1::::<>Button<>::
+LOAD SAVED INV.gd::GDScript::-1::1711419662::0::1::::<>Button<>::
 Load saved.gd::GDScript::-1::1710825506::0::1::::<>Button<>::
 test.tscn::PackedScene::4328121926300693762::1705096712::0::1::::<><>::uid://obrr4e4asvyb::::res://texture_rect.tscn<>uid://ngi5p8qcr3co::::res://Logic_pice/line.tscn<>uid://bmy4sxa0dq5kb::::res://imigs/and_gate.png
 texture_rect.gd::GDScript::-1::1705096712::0::1::::<>TextureRect<>::
-texture_rect.tscn::PackedScene::985772266734657973::1711416598::0::1::::<><>::res://texture_rect.gd
+texture_rect.tscn::PackedScene::985772266734657973::1711470239::0::1::::<><>::res://texture_rect.gd
 title.tscn::PackedScene::5962874181959356278::1707160243::0::1::::<><>::res://Buttons/title_to_crea.gd<>uid://c60yworhlyfvy::::res://Logic_pice/and_gate.tscn
 User_Input.gd::GDScript::-1::1710825506::0::1::::<>Node2D<>::
-User_Input.tscn::PackedScene::105211770827046460::1711416598::0::1::::<><>::res://User_Input.gd
+User_Input.tscn::PackedScene::105211770827046460::1711470239::0::1::::<><>::res://User_Input.gd
 Xor_gate.gd::GDScript::-1::1706559622::0::1::::XorGate<>Gate<>::
 ::res://Buttons/::1711309347
 Back_to_StoryMode.tscn::PackedScene::2066479985031017272::1711309347::0::1::::<><>::res://Buttons/Level_select.gd
-crea_to_title.gd::GDScript::-1::1710825506::0::1::::<>Button<>::
+crea_to_title.gd::GDScript::-1::1711419609::0::1::::<>Button<>::
 Level_select.gd::GDScript::-1::1707160243::0::1::::<>Button<>::
 title_to_crea.gd::GDScript::-1::1707160243::0::1::::<>Button<>::
 ::res://imigs/::1707160243
@@ -29,18 +29,18 @@ not.png::CompressedTexture2D::9023492662547663405::1706483921::1706483921::1::::
 or.png::CompressedTexture2D::4967598356377335986::1706483921::1706483921::1::::<><>::
 out.png::CompressedTexture2D::5796572010293280061::1705096712::1706222467::1::::<><>::
 xor.png::CompressedTexture2D::4722046650239789203::1706483921::1706483921::1::::<><>::
-::res://Inventory/::1711417037
-inventory.gd::GDScript::-1::1711314027::0::1::::Inventory<>Node2D<>::
-inventory.tscn::PackedScene::3238754660073234749::1711417037::0::1::::<><>::uid://c6n6oi4gbncrj::::res://Inventory/white.png<>res://Inventory/inventory.gd<>uid://du8bgg7tt2xkv::::res://Inventory/square.png<>res://Inventory/inventory_area.gd<>res://Inventory/Slot.gd
+::res://Inventory/::1711470239
+inventory.gd::GDScript::-1::1711418624::0::1::::Inventory<>Node2D<>::
+Inventory.tscn::PackedScene::3238754660073234749::1711470239::0::1::::<><>::uid://c6n6oi4gbncrj::::res://Inventory/white.png<>res://Inventory/inventory.gd<>uid://du8bgg7tt2xkv::::res://Inventory/square.png<>res://Inventory/inventory_area.gd<>res://Inventory/Slot.gd
 inventory_area.gd::GDScript::-1::1710825506::0::1::::Inventory_Area<>Area2D<>::
-Slot.gd::GDScript::-1::1711416569::0::1::::Slot<>Panel<>::
+Slot.gd::GDScript::-1::1711419496::0::1::::Slot<>Panel<>::
 square.png::CompressedTexture2D::8631235186943713069::1707160243::1707160243::1::::<><>::
 white.png::CompressedTexture2D::6977440124119003979::1707160243::1707160243::1::::<><>::
 ::res://junk/::1710825506
-::res://Load Game Menu/::1711417038
+::res://Load Game Menu/::1711470239
 Level_Select.gd::GDScript::-1::1711417201::0::1::::<>Control<>::
-Level_Select.tscn::PackedScene::6152562410696157039::1711417384::0::1::::<><>::res://Load Game Menu/Level_Select.gd<>uid://b8cxcoj8owosp::::res://Main Menu/ShareTechMono-Regular.ttf
-::res://Logic_pice/::1711416598
+Level_Select.tscn::PackedScene::6152562410696157039::1711470239::0::1::::<><>::res://Load Game Menu/Level_Select.gd<>uid://b8cxcoj8owosp::::res://Main Menu/ShareTechMono-Regular.ttf
+::res://Logic_pice/::1711470239
 and_gate.gd::GDScript::-1::1706483921::0::1::::AndGate<>Gate<>::
 and_gate.tscn::PackedScene::7001802221231277830::1707789870::0::1::::<><>::res://Logic_pice/and_gate.gd<>uid://c1vedyqripybd::::res://imigs/and.png<>uid://crk8ewvm00l4o::::res://Logic_pice/input_terminal.tscn<>uid://d1447o7qj7b34::::res://Logic_pice/output_terminal.tscn
 binary_state.gd::GDScript::-1::1705096712::0::1::::BinaryState<>Node2D<>::
@@ -56,7 +56,7 @@ nand_gate.tscn::PackedScene::8111542058802209090::1711309347::0::1::::<><>::uid:
 nor_gate.gd::GDScript::-1::1707160243::0::1::::NorGate<>Gate<>::
 nor_gate.tscn::PackedScene::1966120839232605657::1707160243::0::1::::<><>::res://Logic_pice/nor_gate.gd<>uid://cc1lvb0iht6di::::res://imigs/or.png<>uid://drkycaj3frix2::::res://imigs/led-dot.png<>uid://d1447o7qj7b34::::res://Logic_pice/output_terminal.tscn<>uid://crk8ewvm00l4o::::res://Logic_pice/input_terminal.tscn
 not_gate.gd::GDScript::-1::1706483921::0::1::::NotGate<>Gate<>::
-not_gate.tscn::PackedScene::5416775776938427918::1711416598::0::1::::<><>::res://Logic_pice/not_gate.gd<>uid://d1tbuukq4tdjh::::res://imigs/not.png<>uid://d1447o7qj7b34::::res://Logic_pice/output_terminal.tscn<>uid://crk8ewvm00l4o::::res://Logic_pice/input_terminal.tscn
+not_gate.tscn::PackedScene::5416775776938427918::1711470239::0::1::::<><>::res://Logic_pice/not_gate.gd<>uid://d1tbuukq4tdjh::::res://imigs/not.png<>uid://d1447o7qj7b34::::res://Logic_pice/output_terminal.tscn<>uid://crk8ewvm00l4o::::res://Logic_pice/input_terminal.tscn
 or_gate.gd::GDScript::-1::1707160243::0::1::::OrGate<>Gate<>::
 or_gate.tscn::PackedScene::7566990035443479024::1707160243::0::1::::<><>::res://Logic_pice/or_gate.gd<>uid://cc1lvb0iht6di::::res://imigs/or.png<>uid://crk8ewvm00l4o::::res://Logic_pice/input_terminal.tscn<>uid://d1447o7qj7b34::::res://Logic_pice/output_terminal.tscn
 output_terminal.gd::GDScript::-1::1710825506::0::1::::OutputTerminal<>Terminal<>::
@@ -70,9 +70,9 @@ wire.tscn::PackedScene::1233123231166741988::1705096712::0::1::::<><>::res://Log
 wire_manager.gd::GDScript::-1::1710825506::0::1::::<>Node2D<>::
 wire_manager.tscn::PackedScene::1862281523335242003::1705096712::0::1::::<><>::res://Logic_pice/wire_manager.gd
 xor_gate.tscn::PackedScene::2112589112023412930::1706483921::0::1::::<><>::res://Xor_gate.gd<>uid://b8jnohx72mixv::::res://imigs/xor.png<>uid://crk8ewvm00l4o::::res://Logic_pice/input_terminal.tscn<>uid://d1447o7qj7b34::::res://Logic_pice/output_terminal.tscn
-::res://Main Menu/::1711417038
+::res://Main Menu/::1711470239
 Main_Menu.gd::GDScript::-1::1711417379::0::1::::<>Control<>::
-Main_Menu.tscn::PackedScene::5962874181959356278::1711417038::0::1::::<><>::res://Main Menu/Main_Menu.gd<>uid://b8cxcoj8owosp::::res://Main Menu/ShareTechMono-Regular.ttf
+Main_Menu.tscn::PackedScene::5962874181959356278::1711470239::0::1::::<><>::res://Main Menu/Main_Menu.gd<>uid://b8cxcoj8owosp::::res://Main Menu/ShareTechMono-Regular.ttf
 ShareTechMono-Regular.ttf::FontFile::4708182092426828699::1710825506::1710825506::1::::<><>::
 ::res://multiplayer/::1711417038
 multiplayer.gd::GDScript::-1::1711417038::0::1::::<>Node2D<>::
@@ -81,7 +81,7 @@ multiplayer.tscn::PackedScene::890874429804989829::1711417038::0::1::::<><>::res
 Level_Select.gd::GDScript::-1::1711417038::0::1::::<>Control<>::
 Level_Select.tscn::PackedScene::2518276894365603928::1711417038::0::1::::<><>::uid://b8cxcoj8owosp::::res://Main Menu/ShareTechMono-Regular.ttf<>res://New Game Menu/Level_Select.gd
 ::res://saved_files/::1711417390
-slot_data.txt::TextFile::-1::1711417390::0::1::::<><>::
+slot_data.txt::TextFile::-1::1711419754::0::1::::<><>::
 ::res://StoryMode/::1711417038
 Level_manager.gd::GDScript::-1::1707160243::0::1::::LevelManager<>Node<>::
 story_mode.tscn::PackedScene::7520716207786450274::1711417038::0::1::::<><>::res://StoryMode/LVs/Level_logic.gd<>res://Buttons/Level_select.gd<>uid://b8cxcoj8owosp::::res://Main Menu/ShareTechMono-Regular.ttf
@@ -102,7 +102,7 @@ lv8.txt::TextFile::-1::1710825506::0::1::::<><>::
 lv9.txt::TextFile::-1::1710825506::0::1::::<><>::
 lv10.txt::TextFile::-1::1710825506::0::1::::<><>::
 ::res://StoryMode/LVs/::1711417038
-Level_logic.gd::GDScript::-1::1711417038::0::1::::GeneralLevel<>Node<>::
+Level_logic.gd::GDScript::-1::1711470203::0::1::::GeneralLevel<>Node<>::
 lv_1_wire.gd::GDScript::-1::1707160243::0::1::::LevelOne<>GeneralLevel<>::
 lv_1_wire.tscn::PackedScene::5141219597783578656::1710825506::0::1::::<><>::uid://cd0tjidll0v8k::::res://Logic_pice/Toggle_Button.tscn<>res://StoryMode/LVs/lv_1_wire.gd<>uid://crk8ewvm00l4o::::res://Logic_pice/input_terminal.tscn<>uid://4pavgxtipt33::::res://Buttons/Back_to_StoryMode.tscn<>uid://bg57gvfu37fr3::::res://StoryMode/Level_Info/info_button.tscn
 lv_2_not.gd::GDScript::-1::1707160243::0::1::::LevelTwo<>GeneralLevel<>::
