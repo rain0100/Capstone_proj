@@ -8,10 +8,10 @@ var savedItem: Array = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if (get_index() == 0):	#only add item to first inventory box - change depending on whats needed
-		item = ItemClass.instantiate()
-		item.position = Vector2(37.5,37.5)	#place in middle of inventory box
-		add_child(item) 
+	# if (get_index() == 0):	#only add item to first inventory box - change depending on whats needed
+	# 	item = ItemClass.instantiate()
+	# 	item.position = Vector2(37.5,37.5)	#place in middle of inventory box
+	# 	add_child(item) 
 	pass
 	
 # place item into a slot

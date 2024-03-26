@@ -32,6 +32,7 @@ Button_path = "res://inventory.tscn"
 [node name="WireManager" parent="." instance=ExtResource("6_vaf7x")]
 
 [node name="Inventory" parent="." instance=ExtResource("6_k8xqi")]
+visible = false
 position = Vector2(762, 358)
 
 [node name="Toggle_Button" parent="." instance=ExtResource("3_054qb")]

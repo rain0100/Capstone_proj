@@ -21,7 +21,7 @@ func _ready():
 			if(levels[level_butten.get_index()-1]==true or level_butten.get_index() == 0 or level_butten.get_index() == 10 or level_butten.get_index() == 11):
 				continue
 			level_butten.disabled = !levels[level_butten.get_index() - 1]
-	LevelSelect.story_load_flag=0
+	# LevelSelect.story_load_flag=0
 		
 func pass_level(LV_num):
 	print("Congrats! Level ", LV_num + 1, " Passed!")
@@ -43,16 +43,16 @@ func load_data():
 		for level_butten in $TextureRect/VBoxContainer.get_children():
 			levels[level_butten.get_index()-1]=loaded_levels[level_butten.get_index()-1]
 		print("Data Loaded")
-
 	else:
 		print("No data")
-
 
 func _on_save_pressed():
 	save()
 
 func _on_modes_pressed():
-	if(LevelSelect.story_load_flag):
+	if(LevelSelect.story_load_flag == 1):
 		get_tree().change_scene_to_file("res://Load Game Menu/Level_Select.tscn")
+		# print("back to load game menu")
 	else:
 		get_tree().change_scene_to_file("res://New Game Menu/Level_Select.tscn")
+		# print("back to new game menu")

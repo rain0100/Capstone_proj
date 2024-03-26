@@ -1,5 +1,5 @@
 extends Button
-var save_path = "C:/Users/ryanj/Documents/GODOT/Capstone_proj/saved_files/slot_data.txt" 
+var save_path = "C:/Godot/Capstone_proj/saved_files/slot_data.txt" 
 @onready var inventory = $"../Inventory"
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,18 +14,17 @@ func _save_inventory_pressed():
 	var inventory_node = get_node("/root/Node2D/Inventory/GridContainer")
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
 	#var gate = ""
-	for i in range(2, 10): 
+	for i in range(1, 12): 
 		var slot = inventory_node.get_node("Slot"+str(i))
+		if i == 1: 
+			slot = inventory_node.get_node("Slot")
 		if slot:
 			var savedItems = str(slot.savedItem)
-			print("saved: ", savedItems)
 			file.store_string(savedItems + "\n")
 	file.close()
 
 func _load_inventory_pressed():
-	# print(inventory)
 	var gridCont = inventory.get_child(2)
-	print(gridCont)
 	#clear inventory
 	for slot in gridCont.get_children():
 		if (slot.item != null):
@@ -59,7 +58,6 @@ func _load_inventory_pressed():
 		for slot in gridCont.get_children(): 
 			if slot.item == null:
 				slot.item = item
-				print(slot.item)
 				slot.slotPut(slot.item)
 				slot_found = true
 				break
