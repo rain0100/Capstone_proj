@@ -12,13 +12,14 @@ config_version=5
 
 config/name="circuit_game"
 run/main_scene="res://Main Menu/Main_Menu.tscn"
-config/features=PackedStringArray("4.2", "GL Compatibility")
+config/features=PackedStringArray("4.1", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 UserInput="*res://User_Input.gd"
 WireManager="*res://Logic_pice/wire_manager.gd"
+LevelSelect="*res://Load Game Menu/Level_Select.gd"
 
 [dotnet]
 

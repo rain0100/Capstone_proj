@@ -1,129 +1,225 @@
-[gd_scene load_steps=3 format=3 uid="uid://dffddkkprwleo"]
+[gd_scene load_steps=20 format=3 uid="uid://dffddkkprwleo"]
 
 [ext_resource type="Script" path="res://StoryMode/LVs/Level_logic.gd" id="1_ylvpw"]
 [ext_resource type="Script" path="res://Buttons/Level_select.gd" id="2_1nhlc"]
+[ext_resource type="FontFile" uid="uid://b8cxcoj8owosp" path="res://Main Menu/ShareTechMono-Regular.ttf" id="3_papq5"]
+
+[sub_resource type="FontVariation" id="FontVariation_oeqxk"]
+base_font = ExtResource("3_papq5")
+
+[sub_resource type="FontVariation" id="FontVariation_wnuqt"]
+base_font = SubResource("FontVariation_oeqxk")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0e6ab"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h3iib"]
+bg_color = Color(0, 0, 1, 1)
+
+[sub_resource type="Gradient" id="Gradient_hsytu"]
+offsets = PackedFloat32Array(0, 0.0519481, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.968806, 0.954545, 1, 1, 0.313726, 0, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_055om"]
+gradient = SubResource("Gradient_hsytu")
+fill_to = Vector2(1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lfejy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dkseo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nocqi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rx71u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xal36"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cp3d5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kuvh1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4s5yq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wwa71"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hmu4q"]
 
 [node name="Story Mode" type="Node2D"]
 position = Vector2(41, 17)
 script = ExtResource("1_ylvpw")
 
-[node name="LV1_Wire" type="Button" parent="."]
-offset_left = 222.0
-offset_top = 1.0
-offset_right = 298.0
-offset_bottom = 35.0
+[node name="New Game" type="Button" parent="."]
+size_flags_horizontal = 0
+focus_neighbor_top = NodePath("../Quit")
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = SubResource("FontVariation_wnuqt")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0e6ab")
+theme_override_styles/hover = SubResource("StyleBoxFlat_h3iib")
+text = "NEW GAME"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -37.0
+offset_top = -17.0
+offset_right = 1106.0
+offset_bottom = 632.0
+texture = SubResource("GradientTexture2D_055om")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 741.0
+offset_top = 183.0
+offset_right = 1055.0
+offset_bottom = 539.0
+
+[node name="LV1_Wire" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.741176, 0.898039, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.741176, 0.898039, 1)
+theme_override_colors/font_hover_color = Color(0, 0.741176, 0.898039, 1)
+theme_override_colors/font_focus_color = Color(0, 0.741176, 0.898039, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lfejy")
 text = "LV1:Wire
 "
 script = ExtResource("2_1nhlc")
 Button_path = "res://StoryMode/LVs/lv_1_wire.tscn"
 metadata/_edit_use_anchors_ = true
 
-[node name="LV2_not" type="Button" parent="."]
-offset_left = 221.0
-offset_top = 52.0
-offset_right = 297.0
-offset_bottom = 86.0
+[node name="LV2_not" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.0901961, 0.741176, 0.898039, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dkseo")
 text = "LV2:Not
 "
 script = ExtResource("2_1nhlc")
 Button_path = "res://StoryMode/LVs/lv_2_not.tscn"
 metadata/_edit_use_anchors_ = true
 
-[node name="LV3_And" type="Button" parent="."]
-offset_left = 222.0
-offset_top = 97.0
-offset_right = 298.0
-offset_bottom = 131.0
+[node name="LV3_And" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.192157, 0.713726, 0.815686, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nocqi")
 text = "LV3:And
 "
 script = ExtResource("2_1nhlc")
 Button_path = "res://StoryMode/LVs/lv_3_and.tscn"
 metadata/_edit_use_anchors_ = true
 
-[node name="LV4_Or" type="Button" parent="."]
-offset_left = 221.0
-offset_top = 151.0
-offset_right = 297.0
-offset_bottom = 185.0
+[node name="LV4_Or" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.266667, 0.713726, 0.768627, 0.85098)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rx71u")
 text = "LV4:Or
 "
 script = ExtResource("2_1nhlc")
 Button_path = "res://StoryMode/LVs/lv_4_or.tscn"
 metadata/_edit_use_anchors_ = true
 
-[node name="LV5_Nand_Nor" type="Button" parent="."]
-offset_left = 224.0
-offset_top = 200.0
-offset_right = 300.0
-offset_bottom = 234.0
+[node name="LV5_Nand_Nor" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.45098, 0.639216, 0.709804, 0.85098)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xal36")
 text = "LV5:Nand/Nor
 "
 script = ExtResource("2_1nhlc")
 Button_path = "res://StoryMode/LVs/lv_5_nand_nor.tscn"
 metadata/_edit_use_anchors_ = true
 
-[node name="LV6_XOr" type="Button" parent="."]
-offset_left = 424.0
-offset_top = 4.0
-offset_right = 500.0
-offset_bottom = 38.0
+[node name="LV6_XOr" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.662745, 0.639216, 0.709804, 0.85098)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cp3d5")
 text = "LV6:XOr
 "
 script = ExtResource("2_1nhlc")
 Button_path = "res://StoryMode/LVs/lv_6_xor.tscn"
 metadata/_edit_use_anchors_ = true
 
-[node name="Button7" type="Button" parent="."]
-offset_left = 425.0
-offset_top = 55.0
-offset_right = 501.0
-offset_bottom = 89.0
+[node name="Button7" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.615686, 0.478431, 0.478431, 0.85098)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kuvh1")
 text = "LV7:NOr with Nand
 "
 script = ExtResource("2_1nhlc")
 Button_path = "res://StoryMode/LVs/lv_7_nor_with_n_and.tscn"
 metadata/_edit_use_anchors_ = true
 
-[node name="Button8" type="Button" parent="."]
-offset_left = 425.0
-offset_top = 100.0
-offset_right = 501.0
-offset_bottom = 134.0
+[node name="Button8" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.701961, 0.337255, 0.34902, 0.85098)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4s5yq")
 text = "LV8:A*(B+~C)+D
 "
 script = ExtResource("2_1nhlc")
 Button_path = "res://StoryMode/LVs/lv_8_logic_combo.tscn"
 metadata/_edit_use_anchors_ = true
 
-[node name="LV9_mux" type="Button" parent="."]
-offset_left = 423.0
-offset_top = 153.0
-offset_right = 499.0
-offset_bottom = 187.0
+[node name="LV9_mux" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.882353, 0.329412, 0.266667, 0.85098)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wwa71")
 text = "LV9:Mux
 "
 script = ExtResource("2_1nhlc")
 Button_path = "res://StoryMode/LVs/lv_9_mux.tscn"
 metadata/_edit_use_anchors_ = true
 
-[node name="LV10_Register" type="Button" parent="."]
-offset_left = 426.0
-offset_top = 199.0
-offset_right = 502.0
-offset_bottom = 233.0
+[node name="LV10_Register" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.976471, 0.0862745, 0.0313726, 0.85098)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hmu4q")
 text = "LV10:Register
 "
 script = ExtResource("2_1nhlc")
 Button_path = "res://StoryMode/LVs/lv_10_register.tscn"
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="LV1_Wire" to="LV1_Wire" method="_on_pressed"]
-[connection signal="pressed" from="LV2_not" to="LV2_not" method="_on_pressed"]
-[connection signal="pressed" from="LV3_And" to="LV3_And" method="_on_pressed"]
-[connection signal="pressed" from="LV4_Or" to="LV4_Or" method="_on_pressed"]
-[connection signal="pressed" from="LV5_Nand_Nor" to="LV5_Nand_Nor" method="_on_pressed"]
-[connection signal="pressed" from="LV6_XOr" to="LV6_XOr" method="_on_pressed"]
-[connection signal="pressed" from="Button7" to="Button7" method="_on_pressed"]
-[connection signal="pressed" from="Button8" to="Button8" method="_on_pressed"]
-[connection signal="pressed" from="LV9_mux" to="LV9_mux" method="_on_pressed"]
-[connection signal="pressed" from="LV10_Register" to="LV10_Register" method="_on_pressed"]
+[node name="SAVE" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0.85098)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hmu4q")
+text = "SAVE"
+script = ExtResource("2_1nhlc")
+Button_path = "res://StoryMode/LVs/lv_10_register.tscn"
+metadata/_edit_use_anchors_ = true
+
+[node name="MODES" type="Button" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 0.85098)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hmu4q")
+text = "TO MODES"
+script = ExtResource("2_1nhlc")
+Button_path = "res://StoryMode/LVs/lv_10_register.tscn"
+metadata/_edit_use_anchors_ = true
+
+[node name="select" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.365
+anchor_top = 0.5
+anchor_right = 0.365
+anchor_bottom = 0.5
+offset_left = -348.195
+offset_top = -88.5
+offset_right = 245.805
+offset_bottom = 151.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.996078, 0, 1, 1)
+theme_override_fonts/font = ExtResource("3_papq5")
+theme_override_font_sizes/font_size = 100
+text = "SELECT LEVEL"
+
+[connection signal="pressed" from="TextureRect/VBoxContainer/LV1_Wire" to="TextureRect/VBoxContainer/LV1_Wire" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/LV2_not" to="TextureRect/VBoxContainer/LV2_not" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/LV3_And" to="TextureRect/VBoxContainer/LV3_And" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/LV4_Or" to="TextureRect/VBoxContainer/LV4_Or" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/LV5_Nand_Nor" to="TextureRect/VBoxContainer/LV5_Nand_Nor" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/LV6_XOr" to="TextureRect/VBoxContainer/LV6_XOr" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/Button7" to="TextureRect/VBoxContainer/Button7" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/Button8" to="TextureRect/VBoxContainer/Button8" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/LV9_mux" to="TextureRect/VBoxContainer/LV9_mux" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/LV10_Register" to="TextureRect/VBoxContainer/LV10_Register" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/SAVE" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/MODES" to="." method="_on_modes_pressed"]

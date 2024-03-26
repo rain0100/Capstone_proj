@@ -1,5 +1,5 @@
 extends Button
-var save_path = "C:/Godot/Capstone_proj/saved_files/slot_data.txt" 
+var save_path = "C:/Users/ryanj/Documents/GODOT/Capstone_proj/saved_files/slot_data.txt" 
 @onready var inventory = $"../Inventory"
 # Called when the node enters the scene tree for the first time.
 func _ready():
