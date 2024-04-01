@@ -1,5 +1,5 @@
 extends Button
-var save_path = "C:/Godot/Capstone_proj/saved_files/slot_data.txt" 
+var save_path = "C:/Users/ryanj/Documents/Godot/Capstone_proj/saved_files/slot_data.txt" 
 @onready var inventory = $"../Inventory"
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,9 +11,10 @@ func _process(delta):
 	pass
 
 func _save_inventory_pressed(): 
-	var inventory_node = get_node("/root/Node2D/Inventory/GridContainer")
+	var inventory_node = get_node("/root/Node2D/TextureRect/Inventory/GridContainer")
 	var file = FileAccess.open(save_path, FileAccess.WRITE)
 	#var gate = ""
+	
 	for i in range(1, 12): 
 		var slot = inventory_node.get_node("Slot"+str(i))
 		if i == 1: 

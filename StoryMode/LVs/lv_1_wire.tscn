@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cfipeu17qj38g"]
+[gd_scene load_steps=8 format=3 uid="uid://cfipeu17qj38g"]
 
 [ext_resource type="PackedScene" uid="uid://cd0tjidll0v8k" path="res://Logic_pice/Toggle_Button.tscn" id="1_511o0"]
 [ext_resource type="Script" path="res://StoryMode/LVs/lv_1_wire.gd" id="1_buxy5"]
@@ -6,8 +6,23 @@
 [ext_resource type="PackedScene" uid="uid://4pavgxtipt33" path="res://Buttons/Back_to_StoryMode.tscn" id="3_c428g"]
 [ext_resource type="PackedScene" uid="uid://bg57gvfu37fr3" path="res://StoryMode/Level_Info/info_button.tscn" id="5_o6y2t"]
 
+[sub_resource type="Gradient" id="Gradient_e62i6"]
+offsets = PackedFloat32Array(0, 0.0519481, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.968806, 0.954545, 1, 1, 0.313726, 0, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hrwcl"]
+gradient = SubResource("Gradient_e62i6")
+fill_to = Vector2(1, 1)
+
 [node name="Lv1_wire" type="Node2D"]
 script = ExtResource("1_buxy5")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -6.0
+offset_top = -5.0
+offset_right = 1153.0
+offset_bottom = 658.0
+texture = SubResource("GradientTexture2D_hrwcl")
 
 [node name="Toggle_Button" parent="." instance=ExtResource("1_511o0")]
 position = Vector2(322, 236)

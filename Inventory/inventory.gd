@@ -36,7 +36,7 @@ func toggle_inventory_interface() ->void:
 			load_inventory()
 
 func load_inventory(): 
-	var save_path = "C:/Godot/Capstone_proj/saved_files/slot_data.txt" 
+	var save_path = "C:/Users/ryanj/Documents/Godot/Capstone_proj/saved_files/slot_data.txt" 
 	for slot in inventorySlots.get_children():
 		if (slot.item != null):
 			slot.deleteItem()

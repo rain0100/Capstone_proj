@@ -1,18 +1,32 @@
-[gd_scene load_steps=10 format=3 uid="uid://c653bbinlubcp"]
+[gd_scene load_steps=12 format=3 uid="uid://c653bbinlubcp"]
 
 [ext_resource type="Script" path="res://Buttons/crea_to_title.gd" id="1_cfpju"]
 [ext_resource type="PackedScene" uid="uid://cd0tjidll0v8k" path="res://Logic_pice/Toggle_Button.tscn" id="3_054qb"]
 [ext_resource type="PackedScene" uid="uid://crk8ewvm00l4o" path="res://Logic_pice/input_terminal.tscn" id="5_up8p0"]
 [ext_resource type="PackedScene" uid="uid://dntj6a7yxmak5" path="res://Logic_pice/nand_gate.tscn" id="6_e4303"]
-[ext_resource type="PackedScene" uid="uid://bme420ms646bh" path="res://Inventory/Inventory.tscn" id="6_k8xqi"]
+[ext_resource type="PackedScene" uid="uid://bme420ms646bh" path="res://Inventory/inventory.tscn" id="6_k8xqi"]
 [ext_resource type="PackedScene" uid="uid://cjf6rgr5b8rfi" path="res://Logic_pice/not_gate.tscn" id="6_ud448"]
 [ext_resource type="PackedScene" uid="uid://1sdrflb7vqch" path="res://Logic_pice/wire_manager.tscn" id="6_vaf7x"]
 [ext_resource type="Script" path="res://LOAD SAVED INV.gd" id="9_w22hb"]
 [ext_resource type="PackedScene" uid="uid://cvdccuv5hqqnh" path="res://Logic_pice/clock.tscn" id="11_kp1q6"]
 
+[sub_resource type="Gradient" id="Gradient_ck8rq"]
+offsets = PackedFloat32Array(0, 0.0519481, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.968806, 0.954545, 1, 1, 0.313726, 0, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0o0uj"]
+gradient = SubResource("Gradient_ck8rq")
+fill_to = Vector2(1, 1)
+
 [node name="Node2D" type="Node2D"]
 
-[node name="Button" type="Button" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 658.0
+texture = SubResource("GradientTexture2D_0o0uj")
+
+[node name="Button" type="Button" parent="TextureRect"]
+layout_mode = 0
 offset_left = 959.0
 offset_top = 1.0
 offset_right = 1151.0
@@ -21,37 +35,38 @@ text = "Back"
 script = ExtResource("1_cfpju")
 Button_path = "res://title.tscn"
 
-[node name="WireManager" parent="." instance=ExtResource("6_vaf7x")]
+[node name="WireManager" parent="TextureRect" instance=ExtResource("6_vaf7x")]
 
-[node name="Inventory" parent="." instance=ExtResource("6_k8xqi")]
+[node name="Inventory" parent="TextureRect" instance=ExtResource("6_k8xqi")]
 visible = false
 position = Vector2(762, 358)
 
-[node name="Toggle_Button" parent="." instance=ExtResource("3_054qb")]
+[node name="Toggle_Button" parent="TextureRect" instance=ExtResource("3_054qb")]
 position = Vector2(86, 258)
 
-[node name="Input_terminal" parent="." instance=ExtResource("5_up8p0")]
+[node name="Input_terminal" parent="TextureRect" instance=ExtResource("5_up8p0")]
 position = Vector2(677, 299)
 
-[node name="Not_Gate" parent="." instance=ExtResource("6_ud448")]
+[node name="Not_Gate" parent="TextureRect" instance=ExtResource("6_ud448")]
 position = Vector2(135, 192)
 
-[node name="Nand_Gate" parent="." instance=ExtResource("6_e4303")]
+[node name="Nand_Gate" parent="TextureRect" instance=ExtResource("6_e4303")]
 position = Vector2(283, 259)
 
-[node name="Nand_Gate2" parent="." instance=ExtResource("6_e4303")]
+[node name="Nand_Gate2" parent="TextureRect" instance=ExtResource("6_e4303")]
 position = Vector2(285, 362)
 
-[node name="Nand_Gate3" parent="." instance=ExtResource("6_e4303")]
+[node name="Nand_Gate3" parent="TextureRect" instance=ExtResource("6_e4303")]
 position = Vector2(487, 252)
 
-[node name="Nand_Gate4" parent="." instance=ExtResource("6_e4303")]
+[node name="Nand_Gate4" parent="TextureRect" instance=ExtResource("6_e4303")]
 position = Vector2(504, 380)
 
-[node name="clock" parent="." instance=ExtResource("11_kp1q6")]
+[node name="clock" parent="TextureRect" instance=ExtResource("11_kp1q6")]
 position = Vector2(44.2506, 381.618)
 
-[node name="Save" type="Button" parent="."]
+[node name="Save" type="Button" parent="TextureRect"]
+layout_mode = 0
 offset_left = 960.0
 offset_top = 45.0
 offset_right = 1151.0
@@ -59,5 +74,5 @@ offset_bottom = 93.0
 text = "Save"
 script = ExtResource("9_w22hb")
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
-[connection signal="pressed" from="Save" to="Save" method="_save_inventory_pressed"]
+[connection signal="pressed" from="TextureRect/Button" to="TextureRect/Button" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/Save" to="TextureRect/Save" method="_save_inventory_pressed"]
