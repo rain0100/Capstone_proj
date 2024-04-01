@@ -13,5 +13,9 @@ func _process(delta):
 
 
 func _on_pressed():
-	get_tree().change_scene_to_file(Button_path)
-	pass # Replace with function body.
+	if(LevelSelect.story_load_flag == 1):
+		get_tree().change_scene_to_file("res://Load Game Menu/Level_Select.tscn")
+		# print("back to load game menu")
+	else:
+		get_tree().change_scene_to_file("res://New Game Menu/Level_Select.tscn")
+		# print("back to new game menu")
