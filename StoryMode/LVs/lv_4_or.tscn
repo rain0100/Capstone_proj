@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d1ox6obbel25t"]
+[gd_scene load_steps=9 format=3 uid="uid://d1ox6obbel25t"]
 
 [ext_resource type="Script" path="res://StoryMode/LVs/lv_4_or.gd" id="1_oa2mq"]
 [ext_resource type="PackedScene" uid="uid://cd0tjidll0v8k" path="res://Logic_pice/Toggle_Button.tscn" id="1_qybwf"]
@@ -7,8 +7,21 @@
 [ext_resource type="PackedScene" uid="uid://4pavgxtipt33" path="res://Buttons/Back_to_StoryMode.tscn" id="4_51ldy"]
 [ext_resource type="PackedScene" uid="uid://bg57gvfu37fr3" path="res://StoryMode/Level_Info/info_button.tscn" id="6_s6ets"]
 
+[sub_resource type="Gradient" id="Gradient_15koo"]
+offsets = PackedFloat32Array(0, 0.0519481, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.968806, 0.954545, 1, 1, 0.313726, 0, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_f3dpg"]
+gradient = SubResource("Gradient_15koo")
+fill_to = Vector2(1, 1)
+
 [node name="LV4_Or" type="Node2D"]
 script = ExtResource("1_oa2mq")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 658.0
+texture = SubResource("GradientTexture2D_f3dpg")
 
 [node name="Back_to_StoryMode" parent="." instance=ExtResource("4_51ldy")]
 position = Vector2(1066, 27)

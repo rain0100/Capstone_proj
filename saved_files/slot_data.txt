@@ -1,5 +1,5 @@
-[Nand_Gate:<Node2D#171765138733>]
-[Not_Gate:<Node2D#172318786748>]
+[Nand_Gate2:<Node2D#44660950370>]
+[]
 []
 []
 []

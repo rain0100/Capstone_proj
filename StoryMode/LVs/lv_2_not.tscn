@@ -7,12 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://4pavgxtipt33" path="res://Buttons/Back_to_StoryMode.tscn" id="4_sigw1"]
 [ext_resource type="PackedScene" uid="uid://bg57gvfu37fr3" path="res://StoryMode/Level_Info/info_button.tscn" id="6_0wqfk"]
 
-[sub_resource type="Gradient" id="Gradient_5dewx"]
+[sub_resource type="Gradient" id="Gradient_15koo"]
 offsets = PackedFloat32Array(0, 0.0519481, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0.968806, 0.954545, 1, 1, 0.313726, 0, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_1fu33"]
-gradient = SubResource("Gradient_5dewx")
+gradient = SubResource("Gradient_15koo")
 fill_to = Vector2(1, 1)
 
 [node name="LV2_Not" type="Node2D"]
