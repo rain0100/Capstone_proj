@@ -10,6 +10,22 @@ var usrnm: String
 var msg: String 
 
 
+<<<<<<< Updated upstream
+=======
+func _enter_tree():
+	print(host_flag)
+	if(host_flag>0):
+		usrnm=usrnm
+		$join.hide()
+		$host.hide()
+		$username.hide()
+	if(join_flag>0):
+		usrnm=usrnm
+		$join.hide()
+		$host.hide()
+		$username.hide()
+	
+>>>>>>> Stashed changes
 func _on_host_pressed():
 	var peer= ENetMultiplayerPeer.new()
 	peer.create_server(5000)
